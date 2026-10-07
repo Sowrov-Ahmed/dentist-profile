@@ -1,0 +1,596 @@
+[
+  {
+    "id": "case-conservative-smile",
+    "slug": "conservative-smile-planning",
+    "number": "01",
+    "label": "Smile Design",
+    "title": "Conservative Smile Planning",
+    "shortTitle": "Conservative Smile...",
+    "summary": "A demo planning story showing how aesthetic concerns can be reviewed with tooth preservation and gum health in mind.",
+    "image": "/assets/img/case-h1-img1.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "The patient wanted a brighter, more balanced smile but was unsure whether aggressive cosmetic treatment was necessary.",
+    "approach": "The consultation reviewed gum health, shade expectations, enamel preservation, tooth proportions, and a phased conservative plan before cosmetic choices were discussed.",
+    "outcome": "This demo case demonstrates the planning process only. Replace with consented clinical records before using real patient outcomes.",
+    "points": [
+      "Health-first aesthetic assessment",
+      "Conservative sequence discussion",
+      "Clear explanation of limitations"
+    ],
+    "relatedServiceSlugs": [
+      "smile-design-consultation",
+      "preventive-dentistry",
+      "restorative-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "gum-health-maintenance-plan",
+      "preventive-family-care-review"
+    ]
+  },
+  {
+    "id": "case-endodontic-preservation",
+    "slug": "tooth-preserving-endodontic-care",
+    "number": "02",
+    "label": "Endodontics",
+    "title": "Tooth-Preserving Endodontic Care",
+    "shortTitle": "Tooth Preserving...",
+    "summary": "A demo case explaining diagnostic workflow when root canal treatment may help preserve a natural tooth.",
+    "image": "/assets/img/case-h1-img2.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "The patient reported persistent toothache and needed to understand whether extraction was the only option.",
+    "approach": "Symptoms, clinical signs, radiographic information, prognosis, restoration needs, and alternatives were explained before treatment decisions.",
+    "outcome": "The case presents decision-making logic, not a guaranteed result. Real outcomes vary by diagnosis, restorability, and maintenance.",
+    "points": [
+      "Pain source assessment",
+      "Endodontic prognosis review",
+      "Restoration planning after treatment"
+    ],
+    "relatedServiceSlugs": [
+      "root-canal-treatment",
+      "restorative-dentistry",
+      "urgent-dental-pain-review"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "urgent-toothache-assessment",
+      "conservative-smile-planning"
+    ]
+  },
+  {
+    "id": "case-functional-restoration",
+    "slug": "functional-restoration-plan",
+    "number": "03",
+    "label": "Restorative",
+    "title": "Functional Restoration Plan",
+    "shortTitle": "Functional Restoration...",
+    "summary": "A restorative planning example focused on bite comfort, tooth structure preservation, and long-term maintenance.",
+    "image": "/assets/img/case-h1-img3.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "A damaged tooth needed restoration, but the treatment choice had to account for chewing forces and remaining tooth structure.",
+    "approach": "The plan reviewed crack risk, restoration size, material choices, sensitivity expectations, and maintenance responsibilities.",
+    "outcome": "This demo case highlights clinical communication and conservative restorative decision-making.",
+    "points": [
+      "Bite-aware evaluation",
+      "Material option discussion",
+      "Maintenance guidance"
+    ],
+    "relatedServiceSlugs": [
+      "restorative-dentistry",
+      "root-canal-treatment",
+      "preventive-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "tooth-preserving-endodontic-care",
+      "conservative-smile-planning",
+      "preventive-family-care-review"
+    ]
+  },
+  {
+    "id": "case-gum-health",
+    "slug": "gum-health-maintenance-plan",
+    "number": "04",
+    "label": "Gum Care",
+    "title": "Gum Health Maintenance Plan",
+    "shortTitle": "Gum Health Plan...",
+    "summary": "A demo periodontal guidance story for bleeding gums, plaque control, and realistic home-care routines.",
+    "image": "/assets/img/case-h1-img4.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "The patient noticed bleeding while brushing and wanted to know whether it was normal.",
+    "approach": "The visit reviewed plaque retention areas, brushing pressure, interdental cleaning, gum inflammation, and maintenance intervals.",
+    "outcome": "The demo emphasizes early gum assessment and patient education instead of presenting a verified treatment result.",
+    "points": [
+      "Bleeding trigger review",
+      "Interdental care coaching",
+      "Recall schedule planning"
+    ],
+    "relatedServiceSlugs": [
+      "gum-care-guidance",
+      "preventive-dentistry",
+      "smile-design-consultation"
+    ],
+    "relatedCaseSlugs": [
+      "preventive-family-care-review",
+      "conservative-smile-planning",
+      "urgent-toothache-assessment"
+    ]
+  },
+  {
+    "id": "case-urgent-pain",
+    "slug": "urgent-toothache-assessment",
+    "number": "05",
+    "label": "Dental Pain",
+    "title": "Urgent Toothache Assessment",
+    "shortTitle": "Urgent Toothache...",
+    "summary": "A demo workflow for assessing sudden toothache, sensitivity, bite pain, and infection warning signs.",
+    "image": "/assets/img/case-h1-img5.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "The patient needed quick clarity about dental pain and whether urgent escalation was required.",
+    "approach": "The consultation reviewed pain duration, triggers, swelling, biting discomfort, recent restorations, and emergency warning signs.",
+    "outcome": "The example shows safe triage communication and next-step planning for acute symptoms.",
+    "points": [
+      "Pain history mapping",
+      "Warning sign screening",
+      "Next-step treatment guidance"
+    ],
+    "relatedServiceSlugs": [
+      "urgent-dental-pain-review",
+      "root-canal-treatment",
+      "restorative-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "tooth-preserving-endodontic-care",
+      "functional-restoration-plan",
+      "gum-health-maintenance-plan"
+    ]
+  },
+  {
+    "id": "case-preventive-family",
+    "slug": "preventive-family-care-review",
+    "number": "06",
+    "label": "Preventive",
+    "title": "Preventive Family Care Review",
+    "shortTitle": "Preventive Family...",
+    "summary": "A demo preventive consultation pattern for a family wanting practical, sustainable oral-care guidance.",
+    "image": "/assets/img/case-h1-img6.jpg",
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "challenge": "The family wanted simple guidance for cavity prevention, sensitivity, and better daily cleaning habits.",
+    "approach": "Risk factors, diet timing, brushing technique, interdental cleaning, fluoride guidance, and recall timing were discussed.",
+    "outcome": "The example demonstrates preventive education density for a personal dental specialist website.",
+    "points": [
+      "Risk-based prevention",
+      "Home routine coaching",
+      "Clear recall planning"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "gum-care-guidance",
+      "restorative-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "gum-health-maintenance-plan",
+      "conservative-smile-planning",
+      "functional-restoration-plan"
+    ]
+  },
+  {
+    "id": "case-alignment-hygiene",
+    "slug": "alignment-friendly-hygiene-plan",
+    "number": "07",
+    "label": "Preventive",
+    "title": "Alignment-Friendly Hygiene Plan",
+    "shortTitle": "Alignment Hygiene...",
+    "summary": "A preventive education case for keeping teeth and gums clean around crowded areas, retainers, or aligner-style appliances.",
+    "image": "/assets/img/case-h1-img7.jpg",
+    "challenge": "The patient found cleaning difficult around tight contacts and wanted a routine that did not feel overwhelming.",
+    "approach": "The visit reviewed plaque-retentive areas, brush angulation, interdental tool selection, fluoride exposure, and realistic habit-building steps.",
+    "outcome": "This demo shows how personal coaching can support cleaner teeth and healthier gums during alignment-related care.",
+    "points": [
+      "Crowding-aware cleaning review",
+      "Interdental tool selection",
+      "Simple routine planning"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "gum-care-guidance",
+      "smile-design-consultation"
+    ],
+    "relatedCaseSlugs": [
+      "preventive-family-care-review",
+      "gum-health-maintenance-plan",
+      "diet-risk-cavity-prevention-plan"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-cracked-filling-review",
+    "slug": "cracked-filling-review",
+    "number": "08",
+    "label": "Restorative",
+    "title": "Cracked Filling Review",
+    "shortTitle": "Cracked Filling...",
+    "summary": "A restorative planning example for assessing an older filling, bite pressure, symptoms, and replacement options.",
+    "image": "/assets/img/case-h3-img1.jpg",
+    "challenge": "The patient noticed food trapping and occasional biting discomfort around a large existing filling.",
+    "approach": "The consultation reviewed margins, remaining tooth structure, crack risk, bite loading, and conservative replacement choices.",
+    "outcome": "The case demonstrates structured decision-making for a restoration before symptoms become more complex.",
+    "points": [
+      "Existing restoration review",
+      "Bite-force discussion",
+      "Replacement option planning"
+    ],
+    "relatedServiceSlugs": [
+      "restorative-dentistry",
+      "preventive-dentistry",
+      "urgent-dental-pain-review"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "crown-replacement-planning",
+      "urgent-toothache-assessment"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-whitening-readiness",
+    "slug": "whitening-readiness-consultation",
+    "number": "09",
+    "label": "Smile Design",
+    "title": "Whitening Readiness Consultation",
+    "shortTitle": "Whitening Readiness...",
+    "summary": "A cosmetic planning case focused on checking sensitivity, restorations, expectations, and oral health before whitening.",
+    "image": "/assets/img/case-h3-img2.jpg",
+    "challenge": "The patient wanted a brighter smile but had sensitivity and several visible restorations.",
+    "approach": "The visit reviewed causes of sensitivity, restoration shade limitations, gum condition, and safe timing for whitening.",
+    "outcome": "The example highlights why cosmetic decisions should be planned after a health and expectation review.",
+    "points": [
+      "Sensitivity screening",
+      "Shade expectation review",
+      "Health-first cosmetic planning"
+    ],
+    "relatedServiceSlugs": [
+      "smile-design-consultation",
+      "preventive-dentistry",
+      "restorative-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "conservative-smile-planning",
+      "gum-recession-sensitivity-review",
+      "post-treatment-maintenance-roadmap"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-night-guard-bite",
+    "slug": "night-guard-bite-comfort-plan",
+    "number": "10",
+    "label": "Bite Care",
+    "title": "Night Guard Bite Comfort Plan",
+    "shortTitle": "Night Guard Plan...",
+    "summary": "A bite-comfort case for patients with grinding signs, jaw fatigue, restoration wear, or morning tooth tenderness.",
+    "image": "/assets/img/case-h3-img3.jpg",
+    "challenge": "The patient reported morning jaw tiredness and visible wear on several teeth.",
+    "approach": "The assessment considered grinding history, bite contacts, tooth wear, restoration risk, and whether a protective guard was appropriate.",
+    "outcome": "This demo focuses on explaining risk reduction and follow-up rather than promising symptom elimination.",
+    "points": [
+      "Wear-pattern discussion",
+      "Bite comfort review",
+      "Protective appliance planning"
+    ],
+    "relatedServiceSlugs": [
+      "restorative-dentistry",
+      "urgent-dental-pain-review",
+      "preventive-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "cracked-filling-review",
+      "crown-replacement-planning"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-gum-recession-sensitivity",
+    "slug": "gum-recession-sensitivity-review",
+    "number": "11",
+    "label": "Gum Care",
+    "title": "Gum Recession Sensitivity Review",
+    "shortTitle": "Recession Sensitivity...",
+    "summary": "A gum-care case explaining why exposed root surfaces can feel sensitive and how habits can be adjusted.",
+    "image": "/assets/img/case-h4-img1.jpg",
+    "challenge": "The patient felt cold sensitivity near the gum line and was brushing harder to feel clean.",
+    "approach": "The consultation reviewed gum recession, brushing pressure, toothbrush selection, sensitivity triggers, and maintenance intervals.",
+    "outcome": "The case illustrates patient education for protecting gum margins and reducing avoidable irritation.",
+    "points": [
+      "Gum-line assessment",
+      "Brushing pressure coaching",
+      "Sensitivity trigger review"
+    ],
+    "relatedServiceSlugs": [
+      "gum-care-guidance",
+      "preventive-dentistry",
+      "smile-design-consultation"
+    ],
+    "relatedCaseSlugs": [
+      "gum-health-maintenance-plan",
+      "whitening-readiness-consultation",
+      "alignment-friendly-hygiene-plan"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-crown-replacement",
+    "slug": "crown-replacement-planning",
+    "number": "12",
+    "label": "Restorative",
+    "title": "Crown Replacement Planning",
+    "shortTitle": "Crown Replacement...",
+    "summary": "A restorative planning case for reviewing an aging crown, margins, bite comfort, and realistic replacement sequencing.",
+    "image": "/assets/img/case-h4-img2.jpg",
+    "challenge": "The patient was concerned about an older crown that looked uneven and occasionally trapped food.",
+    "approach": "The assessment reviewed crown margins, gum response, bite contacts, tooth support, and whether other treatment was needed first.",
+    "outcome": "The demo shows how crown decisions can be explained clearly before irreversible treatment begins.",
+    "points": [
+      "Crown margin review",
+      "Gum and bite assessment",
+      "Replacement sequence planning"
+    ],
+    "relatedServiceSlugs": [
+      "restorative-dentistry",
+      "gum-care-guidance",
+      "root-canal-treatment"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "cracked-filling-review",
+      "tooth-preserving-endodontic-care"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-maintenance-roadmap",
+    "slug": "post-treatment-maintenance-roadmap",
+    "number": "13",
+    "label": "Preventive",
+    "title": "Post-Treatment Maintenance Roadmap",
+    "shortTitle": "Maintenance Roadmap...",
+    "summary": "A prevention-focused case for helping patients protect restorations, gums, and comfort after active treatment is complete.",
+    "image": "/assets/img/case-h5-img1.jpg",
+    "challenge": "The patient completed care and wanted to understand how to avoid returning only when something hurts.",
+    "approach": "A maintenance plan reviewed recall timing, cleaning priorities, bite monitoring, diet frequency, and symptoms that need earlier review.",
+    "outcome": "The case shows how a personal dental specialist can turn treatment completion into a practical long-term plan.",
+    "points": [
+      "Recall interval planning",
+      "Restoration monitoring",
+      "Prevention-focused follow-up"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "restorative-dentistry",
+      "gum-care-guidance"
+    ],
+    "relatedCaseSlugs": [
+      "preventive-family-care-review",
+      "conservative-smile-planning",
+      "diet-risk-cavity-prevention-plan"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-diet-risk-prevention",
+    "slug": "diet-risk-cavity-prevention-plan",
+    "number": "14",
+    "label": "Preventive",
+    "title": "Diet Risk Cavity Prevention Plan",
+    "shortTitle": "Diet Risk Plan...",
+    "summary": "A preventive counselling case for frequent snacking, acidic drinks, dry mouth, and cavity-risk reduction.",
+    "image": "/assets/img/case-h5-img2.jpg",
+    "challenge": "The patient had repeated early cavities despite brushing daily and wanted to know what was being missed.",
+    "approach": "The review explored sugar frequency, acidic beverages, fluoride habits, saliva factors, and easy substitutions that fit daily life.",
+    "outcome": "This case highlights practical risk conversations without blaming the patient or promising guaranteed prevention.",
+    "points": [
+      "Diet timing review",
+      "Fluoride habit planning",
+      "Risk-based prevention"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "gum-care-guidance",
+      "restorative-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "preventive-family-care-review",
+      "alignment-friendly-hygiene-plan",
+      "dry-mouth-prevention-counseling"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-implant-readiness",
+    "slug": "implant-readiness-discussion",
+    "number": "15",
+    "label": "Consultation",
+    "title": "Implant Readiness Discussion",
+    "shortTitle": "Implant Readiness...",
+    "summary": "A consultation case explaining how a missing-tooth plan can be discussed with health, bite, gum, and referral considerations.",
+    "image": "/assets/img/case-h1-img1.jpg",
+    "challenge": "The patient wanted to replace a missing tooth but needed clarity about whether an implant was immediately suitable.",
+    "approach": "The consultation covered gum health, space, bite forces, medical history, imaging needs, alternatives, and referral timing.",
+    "outcome": "The example demonstrates transparent treatment planning and when specialist referral may be appropriate.",
+    "points": [
+      "Missing-tooth option review",
+      "Referral readiness discussion",
+      "Maintenance responsibility planning"
+    ],
+    "relatedServiceSlugs": [
+      "restorative-dentistry",
+      "gum-care-guidance",
+      "preventive-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "functional-restoration-plan",
+      "post-treatment-maintenance-roadmap",
+      "crown-replacement-planning"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-wisdom-tooth-triage",
+    "slug": "wisdom-tooth-pain-triage",
+    "number": "16",
+    "label": "Dental Pain",
+    "title": "Wisdom Tooth Pain Triage",
+    "shortTitle": "Wisdom Tooth Triage...",
+    "summary": "An urgent review case for wisdom-tooth discomfort, swelling risk, cleaning difficulty, and referral decision-making.",
+    "image": "/assets/img/case-h1-img2.jpg",
+    "challenge": "The patient had recurring gum soreness behind the back molar and was worried about infection.",
+    "approach": "The assessment reviewed swelling, mouth opening, cleaning access, food trapping, bite trauma, and referral criteria.",
+    "outcome": "The case presents safe triage and clear escalation advice for wisdom-tooth symptoms.",
+    "points": [
+      "Urgency screening",
+      "Cleaning access review",
+      "Referral criteria discussion"
+    ],
+    "relatedServiceSlugs": [
+      "urgent-dental-pain-review",
+      "gum-care-guidance",
+      "preventive-dentistry"
+    ],
+    "relatedCaseSlugs": [
+      "urgent-toothache-assessment",
+      "gum-health-maintenance-plan",
+      "dry-mouth-prevention-counseling"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-retainer-care",
+    "slug": "orthodontic-retainer-care-review",
+    "number": "17",
+    "label": "Preventive",
+    "title": "Orthodontic Retainer Care Review",
+    "shortTitle": "Retainer Care...",
+    "summary": "A prevention case for cleaning retainers, protecting gum health, and avoiding relapse-related concerns after alignment treatment.",
+    "image": "/assets/img/case-h1-img3.jpg",
+    "challenge": "The patient wore retainers inconsistently and was unsure how to clean them without damaging them.",
+    "approach": "The visit discussed wear routine, retainer hygiene, plaque control, gum monitoring, and when to seek orthodontic review.",
+    "outcome": "This case demonstrates practical maintenance advice after alignment-focused care.",
+    "points": [
+      "Retainer cleaning routine",
+      "Gum monitoring",
+      "Relapse concern guidance"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "gum-care-guidance",
+      "smile-design-consultation"
+    ],
+    "relatedCaseSlugs": [
+      "alignment-friendly-hygiene-plan",
+      "conservative-smile-planning",
+      "post-treatment-maintenance-roadmap"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  },
+  {
+    "id": "case-dry-mouth-prevention",
+    "slug": "dry-mouth-prevention-counseling",
+    "number": "18",
+    "label": "Preventive",
+    "title": "Dry Mouth Prevention Counseling",
+    "shortTitle": "Dry Mouth Care...",
+    "summary": "A patient-education case about dry mouth, cavity risk, sensitivity, medication history, and practical comfort strategies.",
+    "image": "/assets/img/case-h1-img4.jpg",
+    "challenge": "The patient experienced dry mouth and increasing sensitivity, especially at night and on waking.",
+    "approach": "The review considered hydration, medication history, saliva changes, fluoride support, diet frequency, and warning signs needing medical input.",
+    "outcome": "The example shows how dental prevention can connect symptoms, risk factors, and daily comfort strategies.",
+    "points": [
+      "Dry mouth risk review",
+      "Fluoride support planning",
+      "Comfort and referral guidance"
+    ],
+    "relatedServiceSlugs": [
+      "preventive-dentistry",
+      "gum-care-guidance",
+      "urgent-dental-pain-review"
+    ],
+    "relatedCaseSlugs": [
+      "diet-risk-cavity-prevention-plan",
+      "gum-recession-sensitivity-review",
+      "wisdom-tooth-pain-triage"
+    ],
+    "detailImage": "/assets/img/caseDimg.jpg",
+    "detailImages": [
+      "/assets/img/case-h1-img7.jpg",
+      "/assets/img/serD-img3.jpg"
+    ]
+  }
+]

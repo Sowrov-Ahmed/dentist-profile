@@ -1,0 +1,93 @@
+[
+  {
+    "id": "gulshan-avenue-dental-chamber",
+    "name": "Gulshan Avenue Dental Chamber",
+    "address": "Dental Chamber, Gulshan Avenue, Dhaka, Bangladesh",
+    "tag": "Primary chamber",
+    "days": "Saturday · Monday · Wednesday",
+    "hours": "5:00 PM – 9:00 PM",
+    "additionalSchedule": [
+      {
+        "days": "Thursday",
+        "hours": "6:00 PM – 8:30 PM"
+      }
+    ],
+    "phone": "+880 1712-000000",
+    "primary": true,
+    "perPatientTime": 10,
+    "fees": {
+      "new_patient": "1500.00",
+      "follow_up": "800.00",
+      "telemedicine": "1000.00",
+      "report_review": "500.00"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gulshan+Avenue+Dental+Chamber+Dhaka"
+  },
+  {
+    "id": "dhanmondi-evening-dental-suite",
+    "name": "Dhanmondi Evening Dental Suite",
+    "address": "House 14, Road 8/A, Dhanmondi, Dhaka",
+    "tag": "Evening consultation",
+    "days": "Sunday · Tuesday",
+    "hours": "6:00 PM – 9:00 PM",
+    "additionalSchedule": [
+      {
+        "days": "Saturday",
+        "hours": "11:00 AM – 2:00 PM"
+      }
+    ],
+    "phone": "+880 1812-000000",
+    "primary": false,
+    "perPatientTime": 10,
+    "fees": {
+      "new_patient": "1400.00",
+      "follow_up": "700.00",
+      "telemedicine": "1000.00",
+      "report_review": "500.00"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dhanmondi+Dental+Chamber+Dhaka"
+  },
+  {
+    "id": "uttara-weekend-dental-consultation",
+    "name": "Uttara Weekend Dental Consultation",
+    "address": "Sector 7, Uttara, Dhaka",
+    "tag": "Weekend chamber",
+    "days": "Friday",
+    "hours": "4:00 PM – 8:00 PM",
+    "additionalSchedule": [
+      {
+        "days": "Alternate Thursday",
+        "hours": "5:00 PM – 8:00 PM"
+      }
+    ],
+    "phone": "+880 1912-000000",
+    "primary": false,
+    "perPatientTime": 10,
+    "fees": {
+      "new_patient": "1300.00",
+      "follow_up": "700.00",
+      "telemedicine": "900.00",
+      "report_review": "500.00"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Uttara+Dental+Consultation+Dhaka"
+  },
+  {
+    "id": "secure-online-dental-follow-up",
+    "name": "Secure Online Dental Follow-up",
+    "address": "Telemedicine desk for review appointments from Bangladesh",
+    "tag": "Online review",
+    "days": "Monday · Wednesday · Saturday",
+    "hours": "9:00 PM – 10:30 PM",
+    "additionalSchedule": [],
+    "phone": "+880 1612-000000",
+    "primary": false,
+    "perPatientTime": 10,
+    "fees": {
+      "new_patient": "1200.00",
+      "follow_up": "700.00",
+      "telemedicine": "1000.00",
+      "report_review": "500.00"
+    },
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dhaka+Bangladesh"
+  }
+]

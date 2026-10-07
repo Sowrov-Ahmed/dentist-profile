@@ -1,0 +1,522 @@
+[
+  {
+    "id": "blog-sensitive-teeth",
+    "slug": "why-teeth-feel-sensitive",
+    "title": "Why Teeth Feel Sensitive: A Practical Dental Guide",
+    "excerpt": "Sensitivity can come from enamel wear, gum recession, grinding, whitening, decay, or cracked restorations. Learn when to monitor and when to book a dental visit.",
+    "category": "Patient Education",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-01-16",
+    "readTime": "5 min read",
+    "comments": 3,
+    "views": 10,
+    "image": "/assets/img/blog-h1-img1.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Sensitivity",
+      "Preventive",
+      "Dental Care"
+    ],
+    "content": [
+      {
+        "heading": "Sensitivity is a symptom, not a diagnosis",
+        "body": "Cold, sweet, or brushing sensitivity can happen for many reasons. The right response depends on the cause, duration, and whether symptoms are improving, stable, or worsening."
+      },
+      {
+        "heading": "Common causes",
+        "body": "Enamel wear, exposed root surfaces, cracked fillings, grinding, recent whitening, cavities, and gum inflammation can all create sensitivity. Persistent or spontaneous pain should be professionally assessed."
+      },
+      {
+        "heading": "What patients can do",
+        "body": "Use a soft brush, avoid aggressive scrubbing, consider a sensitivity toothpaste, reduce frequent acidic drinks, and book a consultation if symptoms last more than a short period."
+      }
+    ],
+    "checklist": [
+      "Use gentle brushing pressure",
+      "Avoid frequent acidic drinks",
+      "Track triggers and duration",
+      "Book a visit if pain lingers",
+      "Ask about gum recession and enamel wear"
+    ],
+    "quote": {
+      "text": "Small symptoms often become easier to manage when patients ask early instead of waiting until pain becomes constant.",
+      "name": "Demo Clinical Note",
+      "role": "Patient Education"
+    },
+    "homeTitle": "Why Preventive Dental Care Matters Most",
+    "homeImage": "/assets/img/blog-h1-img1.jpg",
+    "commentsList": [
+      {
+        "id": "blog-sensitive-teeth-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-01-16",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-sensitive-teeth-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-01-16",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-root-canal-myths",
+    "slug": "root-canal-treatment-myths",
+    "title": "Root Canal Treatment Myths Patients Still Hear",
+    "excerpt": "Modern root canal care is designed to relieve dental pain and preserve natural teeth when clinically suitable.",
+    "category": "Endodontics",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-02-08",
+    "readTime": "6 min read",
+    "comments": 3,
+    "views": 14,
+    "image": "/assets/img/blog-h1-img2.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Root Canal",
+      "Pain",
+      "Tooth Preservation"
+    ],
+    "content": [
+      {
+        "heading": "Myth: extraction is always easier",
+        "body": "Extraction may be necessary in some cases, but preserving a natural tooth can help maintain chewing function, bite stability, and jawbone support. The correct option depends on prognosis and patient priorities."
+      },
+      {
+        "heading": "Myth: root canals cause pain",
+        "body": "The infection or inflammation inside the tooth is often the source of pain. Treatment is planned to remove the source and help the tooth become comfortable again."
+      },
+      {
+        "heading": "Ask about the full plan",
+        "body": "A root canal is often followed by a restoration. Patients should understand both stages, expected visits, costs, alternatives, and maintenance before deciding."
+      }
+    ],
+    "checklist": [
+      "Ask about tooth restorability",
+      "Discuss alternatives clearly",
+      "Understand the crown or restoration plan",
+      "Follow aftercare instructions",
+      "Return for review if symptoms persist"
+    ],
+    "quote": {
+      "text": "The best treatment decision is the one a patient understands, including benefits, limitations, and long-term care responsibilities.",
+      "name": "Demo Clinical Note",
+      "role": "Endodontic Education"
+    },
+    "homeTitle": "Root Canal Myths Patients Still Hear",
+    "homeImage": "/assets/img/blog-h1-img2.jpg",
+    "commentsList": [
+      {
+        "id": "blog-root-canal-myths-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-02-08",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-root-canal-myths-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-02-08",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-bleeding-gums",
+    "slug": "bleeding-gums-should-not-be-ignored",
+    "title": "Bleeding Gums Should Not Be Ignored",
+    "excerpt": "Bleeding while brushing is common, but it is not something to normalize. Gum inflammation can often improve with timely guidance.",
+    "category": "Gum Health",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-02-25",
+    "readTime": "4 min read",
+    "comments": 3,
+    "views": 12,
+    "image": "/assets/img/blog-h1-img3.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Gum Health",
+      "Prevention",
+      "Hygiene"
+    ],
+    "content": [
+      {
+        "heading": "Bleeding is a warning sign",
+        "body": "Healthy gums usually do not bleed with gentle brushing. Bleeding can indicate plaque buildup, inflammation, incorrect brushing technique, or deeper periodontal concerns."
+      },
+      {
+        "heading": "Do not stop brushing",
+        "body": "Some patients brush less when gums bleed, but plaque removal is part of improvement. Technique may need correction, and professional cleaning or periodontal review may be recommended."
+      },
+      {
+        "heading": "When to book a visit",
+        "body": "Schedule an assessment if bleeding persists, gums look swollen, breath changes, teeth feel loose, or there is gum recession."
+      }
+    ],
+    "checklist": [
+      "Check brushing pressure",
+      "Clean between teeth daily",
+      "Book review for persistent bleeding",
+      "Ask about gum pockets",
+      "Follow a maintenance schedule"
+    ],
+    "quote": {
+      "text": "Gum health is a foundation for long-term tooth stability, comfort, and confidence.",
+      "name": "Demo Clinical Note",
+      "role": "Gum Care"
+    },
+    "homeTitle": "Bleeding Gums Should Not Be Ignored",
+    "homeImage": "/assets/img/blog-h1-img3.jpg",
+    "commentsList": [
+      {
+        "id": "blog-bleeding-gums-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-02-25",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-bleeding-gums-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-02-25",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-before-smile-design",
+    "slug": "before-you-start-smile-design",
+    "title": "Before You Start Smile Design, Check These Things",
+    "excerpt": "A beautiful smile plan should start with gum health, bite comfort, enamel preservation, and realistic expectations.",
+    "category": "Smile Design",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-03-12",
+    "readTime": "5 min read",
+    "comments": 2,
+    "views": 18,
+    "image": "/assets/img/blog-h1-img4.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Smile Design",
+      "Cosmetic",
+      "Planning"
+    ],
+    "content": [
+      {
+        "heading": "Health before aesthetics",
+        "body": "Cosmetic planning should begin with oral health. Gum inflammation, cavities, bite problems, or sensitivity can affect the final result and maintenance."
+      },
+      {
+        "heading": "Conservative options first",
+        "body": "Not every aesthetic concern requires aggressive treatment. Whitening, contouring, hygiene improvement, or small restorations may be discussed before irreversible options."
+      },
+      {
+        "heading": "Maintenance matters",
+        "body": "Cosmetic dentistry requires long-term cleaning, review, and sometimes repairs. Patients should understand maintenance before treatment begins."
+      }
+    ],
+    "checklist": [
+      "Assess gum health",
+      "Discuss shade expectations",
+      "Review bite comfort",
+      "Ask about maintenance",
+      "Avoid rushed irreversible choices"
+    ],
+    "quote": {
+      "text": "A confident smile plan should protect health and respect natural tooth structure.",
+      "name": "Demo Clinical Note",
+      "role": "Smile Planning"
+    },
+    "homeTitle": "Smile Design Starts With Oral Health",
+    "homeImage": "/assets/img/blog-h1-img2.jpg",
+    "commentsList": [
+      {
+        "id": "blog-before-smile-design-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-03-12",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-before-smile-design-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-03-12",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-restoration-options",
+    "slug": "how-dentists-choose-restoration-options",
+    "title": "How Dentists Choose Restoration Options",
+    "excerpt": "Fillings, onlays, and crowns each have different roles. The choice depends on tooth structure, cracks, bite forces, and long-term maintenance.",
+    "category": "Restorative",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-03-28",
+    "readTime": "7 min read",
+    "comments": 4,
+    "views": 21,
+    "image": "/assets/img/blog-h1-img5.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Restoration",
+      "Crowns",
+      "Fillings"
+    ],
+    "content": [
+      {
+        "heading": "The size of the problem matters",
+        "body": "A small cavity may need a conservative filling, while a large cracked tooth may require stronger coverage. The amount of remaining healthy tooth structure guides the decision."
+      },
+      {
+        "heading": "Bite forces matter",
+        "body": "Grinding, clenching, and heavy chewing forces can change the best restoration choice. A restoration must survive function, not just look good on the day it is placed."
+      },
+      {
+        "heading": "Ask about longevity",
+        "body": "Every option has benefits, limits, and maintenance needs. Patients should understand how to care for the restoration and when to return for review."
+      }
+    ],
+    "checklist": [
+      "Ask why a specific option is recommended",
+      "Discuss cracks and bite forces",
+      "Understand material choices",
+      "Review sensitivity expectations",
+      "Plan future maintenance"
+    ],
+    "quote": {
+      "text": "Restorative dentistry works best when the plan protects both the tooth and the patient’s daily function.",
+      "name": "Demo Clinical Note",
+      "role": "Restorative Care"
+    },
+    "commentsList": [
+      {
+        "id": "blog-restoration-options-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-03-28",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-restoration-options-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-03-28",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-dental-pain-warning",
+    "slug": "dental-pain-warning-signs",
+    "title": "Dental Pain Warning Signs That Need Attention",
+    "excerpt": "Toothache, swelling, fever, bite pain, and trauma each require different levels of urgency. Learn what should not be ignored.",
+    "category": "Dental Pain",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-04-09",
+    "readTime": "5 min read",
+    "comments": 2,
+    "views": 19,
+    "image": "/assets/img/blog-h1-img6.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Toothache",
+      "Emergency",
+      "Pain"
+    ],
+    "content": [
+      {
+        "heading": "Pain patterns give clues",
+        "body": "Sharp pain on biting, lingering cold sensitivity, throbbing, or spontaneous pain can point to different causes. A focused history helps guide the examination."
+      },
+      {
+        "heading": "Swelling changes urgency",
+        "body": "Swelling, fever, spreading facial pain, or difficulty swallowing should be treated urgently. Online advice is not enough in these situations."
+      },
+      {
+        "heading": "Do not delay trauma care",
+        "body": "Broken teeth, knocked teeth, or facial injuries require prompt professional assessment. Timing can influence the available options."
+      }
+    ],
+    "checklist": [
+      "Note pain triggers",
+      "Check for swelling",
+      "Do not ignore fever",
+      "Seek urgent care for trauma",
+      "Avoid self-medicating repeatedly"
+    ],
+    "quote": {
+      "text": "Pain is the body asking for assessment; severe warning signs need urgent care, not waiting.",
+      "name": "Demo Clinical Note",
+      "role": "Dental Pain Review"
+    },
+    "commentsList": [
+      {
+        "id": "blog-dental-pain-warning-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-04-09",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-dental-pain-warning-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-04-09",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-daily-oral-care",
+    "slug": "simple-daily-oral-care-routine",
+    "title": "A Simple Daily Oral Care Routine That Patients Can Maintain",
+    "excerpt": "The best routine is the one patients can repeat. Learn a practical sequence for brushing, interdental cleaning, fluoride, and review visits.",
+    "category": "Preventive",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-04-21",
+    "readTime": "4 min read",
+    "comments": 3,
+    "views": 23,
+    "image": "/assets/img/blog-h1-img7.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Prevention",
+      "Routine",
+      "Oral Hygiene"
+    ],
+    "content": [
+      {
+        "heading": "Keep it repeatable",
+        "body": "A routine that is too complicated often fails. Start with twice-daily brushing, daily interdental cleaning, and attention to technique."
+      },
+      {
+        "heading": "Technique matters",
+        "body": "Soft bristles, gentle pressure, and time along the gum line can make a major difference. Aggressive scrubbing can worsen sensitivity and recession."
+      },
+      {
+        "heading": "Review and adjust",
+        "body": "A dental visit can identify areas that need different tools or technique changes. Prevention works best when personalized."
+      }
+    ],
+    "checklist": [
+      "Brush twice daily",
+      "Clean between teeth",
+      "Use gentle pressure",
+      "Reduce frequent sugar exposure",
+      "Attend risk-based recall visits"
+    ],
+    "quote": {
+      "text": "Prevention succeeds when it fits into real daily life.",
+      "name": "Demo Clinical Note",
+      "role": "Prevention"
+    },
+    "commentsList": [
+      {
+        "id": "blog-daily-oral-care-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-04-21",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-daily-oral-care-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-04-21",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blog-first-consultation",
+    "slug": "what-to-expect-at-first-dental-consultation",
+    "title": "What To Expect At A First Dental Consultation",
+    "excerpt": "A first visit should include conversation, examination, clear findings, treatment options, and a plan that patients understand.",
+    "category": "Consultation",
+    "author": "Dr. Nadia Karim",
+    "date": "2026-05-02",
+    "readTime": "5 min read",
+    "comments": 2,
+    "views": 16,
+    "image": "/assets/img/blog-h1-img8.jpg",
+    "detailImage": "/assets/img/blog-img2.jpg",
+    "videoImage": "/assets/img/blogDimg.jpg",
+    "tags": [
+      "Consultation",
+      "Treatment Plan",
+      "Patient Guide"
+    ],
+    "content": [
+      {
+        "heading": "Conversation comes first",
+        "body": "The dentist needs to understand symptoms, concerns, previous experiences, health history, and patient priorities before recommending care."
+      },
+      {
+        "heading": "Findings should be explained",
+        "body": "Patients should leave with a clear understanding of what was found, what matters most, and what can be monitored."
+      },
+      {
+        "heading": "Options should be transparent",
+        "body": "Treatment planning should include alternatives, expected visits, maintenance, fees, limitations, and what may happen if treatment is delayed."
+      }
+    ],
+    "checklist": [
+      "Bring previous dental records if available",
+      "List symptoms and triggers",
+      "Ask about priorities",
+      "Discuss alternatives",
+      "Confirm aftercare expectations"
+    ],
+    "quote": {
+      "text": "A good consultation makes the patient feel informed, not pressured.",
+      "name": "Demo Clinical Note",
+      "role": "Consultation"
+    },
+    "commentsList": [
+      {
+        "id": "blog-first-consultation-comment-1",
+        "name": "Demo Reader",
+        "date": "2026-05-02",
+        "image": "/assets/img/blogDimg2.jpg",
+        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "replies": [
+          {
+            "id": "blog-first-consultation-reply-1",
+            "name": "Demo Care Team",
+            "date": "2026-05-02",
+            "image": "/assets/img/blogDimg3.jpg",
+            "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
+          }
+        ]
+      }
+    ]
+  }
+]

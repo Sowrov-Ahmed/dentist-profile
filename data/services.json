@@ -1,0 +1,398 @@
+[
+  {
+    "id": "svc-preventive-dentistry",
+    "slug": "preventive-dentistry",
+    "number": "01",
+    "title": "Preventive Dentistry & Oral Health Review",
+    "tabTitle": "Preventive Dentistry",
+    "summary": "Routine examination, hygiene guidance, decay-risk review, and recall planning for long-term oral health.",
+    "description": "Preventive dentistry helps patients understand what is happening in the mouth before problems become complex. Visits include a careful dental and gum review, symptom discussion, oral-hygiene coaching, and a practical recall plan.",
+    "homeCopy": "A structured preventive visit reviews teeth, gums, bite comfort, sensitivity, and hygiene habits so small problems can be managed early.",
+    "icon": "/assets/img/ser-h1-icon1.svg",
+    "image": "/assets/img/ser-img-h2.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Comprehensive dental examination",
+      "Gum and plaque-risk assessment",
+      "Decay-risk and sensitivity review",
+      "Home-care technique coaching",
+      "Personal recall schedule"
+    ],
+    "benefits": [
+      "Earlier problem detection",
+      "Lower risk of complex treatment",
+      "Better daily-care confidence",
+      "Clear long-term maintenance plan",
+      "Patient-friendly prevention guidance"
+    ],
+    "detailSections": [
+      {
+        "heading": "Our Approach To Care",
+        "body": "The consultation begins with listening to the patient’s concerns, reviewing oral hygiene routines, and assessing common risk factors such as plaque buildup, gum bleeding, diet, sensitivity, and wear."
+      },
+      {
+        "heading": "Preventive & Ongoing Care",
+        "body": "Patients receive simple, realistic instructions for brushing, interdental cleaning, sensitivity control, diet habits, and follow-up timing based on their risk level."
+      }
+    ],
+    "relatedSlugs": [
+      "gum-care-guidance",
+      "restorative-dentistry",
+      "smile-design-consultation"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon1.svg",
+    "homeImage": "/assets/img/ser-img-h2.jpg",
+    "homeCopyLead": "A structured preventive visit reviews teeth, gums, bite comfort, sensitivity, and hygiene habits",
+    "homeCopyRest": " so small problems can be managed early with a practical recall plan.",
+    "procedureSteps": [
+      "Review dental history, current symptoms, home-care routine, diet habits, and oral-health goals.",
+      "Complete tooth, gum, bite, plaque, sensitivity, and decay-risk assessment with simple explanations.",
+      "Discuss hygiene coaching, fluoride or desensitising options, and a recall plan matched to risk level.",
+      "Document findings and provide practical aftercare instructions that can be followed at home."
+    ],
+    "faqs": [
+      {
+        "question": "How often should preventive dental visits be planned?",
+        "answer": "Many patients benefit from six-month reviews, but recall timing should be personalised according to gum health, decay risk, sensitivity, and existing restorations."
+      },
+      {
+        "question": "Is preventive care only for people with pain?",
+        "answer": "No. The goal is to identify plaque, early decay, gum inflammation, or bite issues before they become painful or expensive to manage."
+      }
+    ]
+  },
+  {
+    "id": "svc-root-canal",
+    "slug": "root-canal-treatment",
+    "number": "02",
+    "title": "Root Canal Treatment Consultation",
+    "tabTitle": "Root Canal Care",
+    "summary": "Tooth-preserving endodontic assessment for persistent pain, deep decay, swelling, or trauma-related symptoms.",
+    "description": "Root canal consultation focuses on diagnosing the source of dental pain and determining whether the natural tooth can be preserved. The process explains prognosis, alternatives, number of visits, and restoration requirements before treatment decisions are made.",
+    "homeCopy": "Pain-focused endodontic consultation helps patients understand whether a painful tooth can be saved and how the full treatment plan works.",
+    "icon": "/assets/img/ser-h1-icon2.svg",
+    "image": "/assets/img/chose-h1-img.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Dental pain source assessment",
+      "Endodontic prognosis discussion",
+      "Tooth-preservation planning",
+      "Restoration and crown planning",
+      "Aftercare and follow-up guidance"
+    ],
+    "benefits": [
+      "Relief-focused diagnosis",
+      "Natural tooth preservation when suitable",
+      "Clear alternatives before treatment",
+      "Better understanding of restoration needs",
+      "Step-by-step patient communication"
+    ],
+    "detailSections": [
+      {
+        "heading": "When Root Canal Care May Be Needed",
+        "body": "Lingering sensitivity, spontaneous toothache, deep decay, swelling, a darkened tooth, or injury can indicate that the nerve tissue requires specialist assessment."
+      },
+      {
+        "heading": "Treatment Planning",
+        "body": "Patients are guided through the expected clinical steps, possible alternatives, restoration needs, and maintenance responsibilities so decisions feel informed rather than rushed."
+      }
+    ],
+    "relatedSlugs": [
+      "restorative-dentistry",
+      "urgent-dental-pain-review",
+      "preventive-dentistry"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon1.svg",
+    "homeImage": "/assets/img/chose-h1-img.jpg",
+    "homeCopyLead": "Pain-focused endodontic consultation helps patients understand whether a painful tooth can be saved",
+    "homeCopyRest": " and how the full treatment plan works before treatment begins.",
+    "procedureSteps": [
+      "Listen to the pain history and review triggers such as cold, heat, biting, swelling, or night pain.",
+      "Assess the tooth clinically and explain whether endodontic treatment, restoration, extraction, or monitoring is appropriate.",
+      "Discuss visit sequence, isolation, disinfection, filling of canals, final restoration, and expected healing checks.",
+      "Provide aftercare guidance and explain when urgent attention is needed for swelling, fever, or worsening pain."
+    ],
+    "faqs": [
+      {
+        "question": "Does every painful tooth need root canal treatment?",
+        "answer": "No. Pain may come from gum problems, cracks, high bite points, decay, sinus pressure, or other causes, so diagnosis is essential before treatment."
+      },
+      {
+        "question": "Why is a final restoration important after root canal care?",
+        "answer": "A root-treated tooth often needs a durable filling, onlay, or crown to reduce fracture risk and support long-term function."
+      }
+    ]
+  },
+  {
+    "id": "svc-restorative-dentistry",
+    "slug": "restorative-dentistry",
+    "number": "03",
+    "title": "Restorative Dentistry Planning",
+    "tabTitle": "Restorative Dentistry",
+    "summary": "Natural-looking restoration planning for damaged, decayed, cracked, or worn teeth with a conservative approach.",
+    "description": "Restorative dentistry rebuilds tooth form and function while protecting healthy tooth structure whenever possible. The appointment reviews decay, cracks, bite forces, material options, and maintenance expectations.",
+    "homeCopy": "Restorative planning rebuilds damaged teeth with attention to comfort, bite function, aesthetics, and long-term maintenance.",
+    "icon": "/assets/img/ser-h1-icon3.svg",
+    "image": "/assets/img/ser-img-h2.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Tooth-colored filling assessment",
+      "Cracked tooth review",
+      "Onlay and crown planning",
+      "Bite and wear evaluation",
+      "Maintenance instructions"
+    ],
+    "benefits": [
+      "Conservative structure preservation",
+      "Improved chewing comfort",
+      "Natural-looking treatment options",
+      "Reduced risk of repeat failure",
+      "Clear aftercare plan"
+    ],
+    "detailSections": [
+      {
+        "heading": "Conservative Restoration Choices",
+        "body": "The specialist explains when a small restoration is enough and when a stronger onlay or crown may be needed because of cracks, heavy bite forces, or previous large fillings."
+      },
+      {
+        "heading": "Function And Maintenance",
+        "body": "Restorations are planned with bite balance, cleaning access, sensitivity expectations, and follow-up checks in mind."
+      }
+    ],
+    "relatedSlugs": [
+      "root-canal-treatment",
+      "smile-design-consultation",
+      "preventive-dentistry"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon2.svg",
+    "homeImage": "/assets/img/ser-img-h2.jpg",
+    "homeCopyLead": "Restorative planning rebuilds damaged teeth with attention to comfort, bite function, and aesthetics",
+    "homeCopyRest": " while keeping long-term maintenance and tooth preservation in view.",
+    "procedureSteps": [
+      "Review damaged, decayed, cracked, worn, or previously restored teeth and discuss comfort concerns.",
+      "Explain conservative options such as tooth-coloured fillings, bonding, onlays, crowns, or staged stabilisation.",
+      "Plan material choice, shade, bite adjustment, cleaning access, and maintenance expectations before treatment.",
+      "Schedule follow-up when needed to review sensitivity, chewing comfort, and restoration performance."
+    ],
+    "faqs": [
+      {
+        "question": "Can a damaged tooth always be restored?",
+        "answer": "Many teeth can be restored conservatively, but very deep cracks, insufficient structure, or uncontrolled infection may require different options."
+      },
+      {
+        "question": "Will a restoration look natural?",
+        "answer": "Shade and shape are planned carefully, but the final result depends on tooth condition, material choice, and maintenance over time."
+      }
+    ]
+  },
+  {
+    "id": "svc-smile-design",
+    "slug": "smile-design-consultation",
+    "number": "04",
+    "title": "Smile Design Consultation",
+    "tabTitle": "Smile Design",
+    "summary": "Aesthetic planning for tooth shape, shade, proportion, alignment, and gum display without rushing irreversible treatment.",
+    "description": "Smile design consultation helps patients explore aesthetic goals through a health-first lens. The visit reviews gum health, tooth proportions, shade, bite comfort, and treatment limitations before any cosmetic decision.",
+    "homeCopy": "A planning-first smile consultation explores shade, proportion, alignment, gum display, and conservative options for aesthetic improvement.",
+    "icon": "/assets/img/ser-h1-icon4.svg",
+    "image": "/assets/img/chose-h1-img.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Aesthetic concern review",
+      "Smile proportion analysis",
+      "Shade and contour discussion",
+      "Gum-health check",
+      "Phased treatment planning"
+    ],
+    "benefits": [
+      "Realistic cosmetic expectations",
+      "Health-first decision making",
+      "Conservative treatment sequencing",
+      "Clear maintenance discussion",
+      "Better patient confidence"
+    ],
+    "detailSections": [
+      {
+        "heading": "Planning Before Cosmetic Care",
+        "body": "A stable, healthy mouth is the foundation of smile design. Gum condition, decay risk, bite comfort, and enamel preservation are reviewed before discussing cosmetic possibilities."
+      },
+      {
+        "heading": "Realistic Expectations",
+        "body": "The consultation explains benefits, limitations, alternatives, and maintenance needs so the patient understands what can be improved conservatively."
+      }
+    ],
+    "relatedSlugs": [
+      "restorative-dentistry",
+      "preventive-dentistry",
+      "gum-care-guidance"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon3.svg",
+    "homeImage": "/assets/img/chose-h1-img.jpg",
+    "homeCopyLead": "A planning-first smile consultation explores shade, proportion, alignment, and gum display",
+    "homeCopyRest": " with conservative options for aesthetic improvement discussed clearly.",
+    "procedureSteps": [
+      "Discuss smile concerns, photographs if appropriate, aesthetic goals, previous dental work, and comfort expectations.",
+      "Assess gum health, decay risk, tooth alignment, shade, shape, bite forces, and enamel preservation before cosmetic planning.",
+      "Compare conservative options such as polishing, whitening discussion, bonding, replacement restorations, or staged referral.",
+      "Create a phased plan that separates health stabilisation from elective aesthetic changes."
+    ],
+    "faqs": [
+      {
+        "question": "Is smile design only cosmetic?",
+        "answer": "No. A stable, healthy mouth is the starting point. Gum health, decay control, bite comfort, and tooth preservation are reviewed first."
+      },
+      {
+        "question": "Will treatment be recommended immediately?",
+        "answer": "The consultation focuses on options and realistic expectations. Elective treatment should only proceed after the patient understands benefits, limits, and maintenance."
+      }
+    ]
+  },
+  {
+    "id": "svc-gum-care",
+    "slug": "gum-care-guidance",
+    "number": "05",
+    "title": "Gum Care & Periodontal Guidance",
+    "tabTitle": "Gum Care",
+    "summary": "Assessment and guidance for bleeding gums, swelling, bad breath, recession, and early periodontal concerns.",
+    "description": "Gum care guidance identifies causes of bleeding, swelling, recession, and plaque retention. Patients receive an achievable daily-care plan and a maintenance schedule based on risk level.",
+    "homeCopy": "Gum-health review focuses on bleeding, inflammation, recession, breath concerns, and daily cleaning routines that patients can actually maintain.",
+    "icon": "/assets/img/ser-h1-icon5.svg",
+    "image": "/assets/img/ser-img-h2.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Gum bleeding assessment",
+      "Periodontal screening",
+      "Recession and sensitivity review",
+      "Interdental cleaning coaching",
+      "Maintenance scheduling"
+    ],
+    "benefits": [
+      "Better plaque control",
+      "Improved gum comfort",
+      "Earlier periodontal risk detection",
+      "Practical home-care instructions",
+      "Long-term tooth support"
+    ],
+    "detailSections": [
+      {
+        "heading": "Common Gum Warning Signs",
+        "body": "Bleeding while brushing, swollen gums, persistent bad breath, gum recession, or loose-feeling teeth should be professionally assessed rather than ignored."
+      },
+      {
+        "heading": "Maintenance Strategy",
+        "body": "The plan may include cleaning technique improvement, interdental tools, recall timing, and specialist referral if advanced periodontal care is required."
+      }
+    ],
+    "relatedSlugs": [
+      "preventive-dentistry",
+      "smile-design-consultation",
+      "urgent-dental-pain-review"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon4.svg",
+    "homeImage": "/assets/img/ser-img-h2.jpg",
+    "homeCopyLead": "Gum-health review focuses on bleeding, inflammation, recession, and breath concerns",
+    "homeCopyRest": " alongside cleaning routines that patients can actually maintain.",
+    "procedureSteps": [
+      "Review bleeding, swelling, bad breath, recession, sensitivity, tobacco history, diabetes risk, and cleaning habits.",
+      "Screen gum pockets, plaque-retentive areas, mobility concerns, and areas that may require periodontal referral.",
+      "Demonstrate brushing and interdental cleaning techniques using tools suited to the patient’s mouth.",
+      "Plan maintenance intervals and explain warning signs that need earlier review."
+    ],
+    "faqs": [
+      {
+        "question": "Are bleeding gums normal?",
+        "answer": "Bleeding gums are common but not normal. They often indicate inflammation and should be assessed before the problem progresses."
+      },
+      {
+        "question": "Can gum problems be managed at home?",
+        "answer": "Daily cleaning is essential, but professional assessment is important to identify deeper periodontal concerns or areas that cannot be cleaned effectively at home."
+      }
+    ]
+  },
+  {
+    "id": "svc-urgent-pain",
+    "slug": "urgent-dental-pain-review",
+    "number": "06",
+    "title": "Urgent Dental Pain Review",
+    "tabTitle": "Dental Pain Review",
+    "summary": "Focused consultation for toothache, swelling, broken teeth, lost restorations, and sudden dental discomfort.",
+    "description": "Urgent dental pain review helps identify likely causes of acute discomfort and explains immediate next steps. Severe swelling, facial trauma, fever, or uncontrolled bleeding should be treated as urgent medical situations.",
+    "homeCopy": "A focused pain review helps patients understand likely causes and immediate next steps for toothache, swelling, or broken restorations.",
+    "icon": "/assets/img/ser-h1-icon6.svg",
+    "image": "/assets/img/chose-h1-img.jpg",
+    "detailImage": "/assets/img/serD-img1.jpg",
+    "detailImages": [
+      "/assets/img/serD-img2.jpg",
+      "/assets/img/serD-img3.jpg"
+    ],
+    "features": [
+      "Pain history review",
+      "Broken tooth assessment",
+      "Swelling and infection warning review",
+      "Temporary comfort guidance",
+      "Referral planning when needed"
+    ],
+    "benefits": [
+      "Faster clarity during discomfort",
+      "Clear urgent-care instructions",
+      "Better understanding of treatment options",
+      "Reduced anxiety through explanation",
+      "Safer next-step planning"
+    ],
+    "detailSections": [
+      {
+        "heading": "What The Review Covers",
+        "body": "The appointment explores pain location, triggers, duration, swelling, biting discomfort, recent dental work, trauma, and any warning signs that require urgent escalation."
+      },
+      {
+        "heading": "Safety First",
+        "body": "If symptoms include spreading swelling, fever, difficulty swallowing, facial trauma, or uncontrolled bleeding, patients should seek urgent emergency care without delay."
+      }
+    ],
+    "relatedSlugs": [
+      "root-canal-treatment",
+      "restorative-dentistry",
+      "preventive-dentistry"
+    ],
+    "homeIcon": "/assets/img/ser-h1-icon5.svg",
+    "homeImage": "/assets/img/chose-h1-img.jpg",
+    "homeCopyLead": "A focused pain review helps patients understand likely causes and immediate next steps",
+    "homeCopyRest": " for toothache, swelling, or broken restorations.",
+    "procedureSteps": [
+      "Record pain location, onset, swelling, trauma, temperature sensitivity, biting pain, medication use, and medical warning signs.",
+      "Assess likely dental causes and explain immediate steps for pain control, temporary restoration needs, referral, or definitive care.",
+      "Prioritise safety by identifying swelling, fever, spreading infection, facial trauma, or uncontrolled bleeding that needs urgent escalation.",
+      "Provide written next-step guidance and arrange follow-up for definitive diagnosis or treatment planning."
+    ],
+    "faqs": [
+      {
+        "question": "When is dental pain an emergency?",
+        "answer": "Spreading swelling, fever, difficulty swallowing or breathing, facial trauma, or uncontrolled bleeding require urgent emergency care."
+      },
+      {
+        "question": "Can antibiotics alone fix toothache?",
+        "answer": "Antibiotics do not solve most dental causes by themselves. The source of pain usually needs diagnosis and definitive dental care."
+      }
+    ]
+  }
+]

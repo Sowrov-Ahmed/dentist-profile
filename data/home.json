@@ -1,0 +1,47 @@
+{
+  "servicesIntro": {
+    "eyebrow": "Service",
+    "title": "Delivering Trusted Dental Care With Precision",
+    "description": "Specialist dental care organized around prevention, diagnosis, tooth preservation, aesthetics, and long-term maintenance."
+  },
+  "choose": {
+    "eyebrow": "Why Choose Us",
+    "title": "Trusted Dental Care Backed By Expertise & Compassion",
+    "description": "This personal dental specialist website presents a calm, explanation-first approach where every treatment plan is discussed with benefits, alternatives, and maintenance needs.",
+    "image": "/assets/img/choose-img-h2.jpg",
+    "items": [
+      {
+        "number": "01",
+        "title": "Experienced Dental Planning",
+        "description": "A focused consultation reviews symptoms, oral health risks, tooth restorability, bite comfort, and realistic treatment options."
+      },
+      {
+        "number": "02",
+        "title": "Patient Focused Care",
+        "description": "Appointments are paced around patient questions, dental anxiety, comfort, and clear aftercare instructions."
+      },
+      {
+        "number": "03",
+        "title": "Modern Treatment Support",
+        "description": "Care planning uses structured examination, patient education, appropriate imaging records, and practical maintenance follow-up."
+      }
+    ]
+  },
+  "videoCount": {
+    "title": "Dedicated To Comfortable Specialist Dental Care",
+    "description": "A calm explanation-first experience for preventive, restorative, endodontic, and smile-planning decisions.",
+    "videoUrl": "https://www.youtube.com/watch?v=o8OgzQdA70c"
+  },
+  "appointment": {
+    "eyebrow": "Appointment",
+    "title": "Make An Appointment For Consulting",
+    "description": "Share your dental concern and preferred time. The demo form is frontend-first and ready for a future Laravel backend.",
+    "successMessage": "Thank you. Your appointment request has been received."
+  },
+  "blogTitle": "Our Most Latest Dental News & Articles",
+  "caseTitle": "Showcasing Dental Planning Excellence",
+  "testimonialTitle": "Feedback & Review From Demo Patients",
+  "caseEyebrow": "Case Study",
+  "testimonialEyebrow": "Testimonials",
+  "blogEyebrow": "Blog & News"
+}

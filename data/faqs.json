@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq-first-visit",
+    "question": "What should I bring to my first dental consultation?",
+    "answer": "Bring previous dental records or X-rays if available, a list of symptoms, current medicines, health conditions, and questions about treatment options."
+  },
+  {
+    "id": "faq-sensitive-teeth",
+    "question": "Are sensitive teeth always serious?",
+    "answer": "Not always, but persistent sensitivity can indicate enamel wear, gum recession, decay, or cracked restorations. A dental review helps identify the cause."
+  },
+  {
+    "id": "faq-root-canal",
+    "question": "Does root canal treatment always need a crown?",
+    "answer": "Not always. The final restoration depends on tooth position, remaining structure, cracks, bite force, and long-term prognosis."
+  },
+  {
+    "id": "faq-emergency",
+    "question": "When should dental pain be treated urgently?",
+    "answer": "Seek urgent professional care for spreading swelling, fever, facial trauma, difficulty swallowing, uncontrolled bleeding, or severe escalating pain."
+  }
+]

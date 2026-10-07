@@ -1,0 +1,314 @@
+{
+  "name": "Dr. Nadia Karim",
+  "title": "Dental Specialist",
+  "shortTitle": "Personal Dental Care",
+  "profileNotice": "Fictional demo specialist profile for portfolio use. Replace with verified professional details before launch.",
+  "aboutSpecialist": {
+    "profile": {
+      "fullName": "Dr. Nadia Karim",
+      "professionalTitle": "Dental Surgeon & Consultant",
+      "specialistFocus": "Restorative Dentistry & Endodontics",
+      "shortDescriptor": "Diagnosis-led restorative and endodontic care focused on preserving natural teeth.",
+      "shortProfile": "Dr. Nadia Karim is a dental surgeon and consultant focused on restorative dentistry, endodontic care, and tooth-preserving treatment planning. Her clinical approach combines careful diagnosis, evidence-informed treatment selection, and clear communication so patients understand their options before treatment begins.",
+      "professionalPositioning": "Consultant, Restorative Dentistry & Endodontics",
+      "patientCareStatement": "Clear explanations, careful diagnosis, and conservative treatment planning are central to every consultation.",
+      "specialistDesignation": "Consultant, Restorative Dentistry & Endodontics",
+      "shortProfessionalSummary": "Dr. Nadia Karim is a dental surgeon and consultant focused on restorative dentistry, endodontic care, and tooth-preserving treatment planning. Her clinical approach combines careful diagnosis, evidence-informed treatment selection, and clear communication so patients understand their options before treatment begins.",
+      "credentials": [
+        "BDS",
+        "MDS",
+        "FCPS",
+        "Consultant",
+        "BMDC",
+        "International Fellowship"
+      ],
+      "portraitImage": "/assets/img/about-img2-h1.jpg",
+      "portraitAlt": "Dr. Nadia Karim reviewing a dental treatment plan with a patient"
+    },
+    "introduction": {
+      "heading": "Diagnosis-led restorative and endodontic care focused on preserving natural teeth.",
+      "professionalApproach": "Dr. Nadia Karim is a dental surgeon and consultant focused on restorative dentistry, endodontic care, and tooth-preserving treatment planning. Her clinical approach combines careful diagnosis, evidence-informed treatment selection, and clear communication so patients understand their options before treatment begins.",
+      "specialistExperience": "Consultant, Restorative Dentistry & Endodontics",
+      "patientCarePhilosophy": "Clear explanations, careful diagnosis, and conservative treatment planning are central to every consultation.",
+      "communicationCommitment": "Clear explanations, careful diagnosis, and conservative treatment planning are central to every consultation."
+    },
+    "credentials": [
+      {
+        "abbreviation": "BDS",
+        "title": "Bachelor of Dental Surgery"
+      },
+      {
+        "abbreviation": "MDS",
+        "title": "Master of Dental Surgery in Conservative Dentistry & Endodontics"
+      },
+      {
+        "abbreviation": "FCPS",
+        "title": "Fellowship in Conservative Dentistry & Endodontics"
+      },
+      {
+        "abbreviation": "Consultant",
+        "title": "Restorative Dentistry & Endodontics"
+      },
+      {
+        "abbreviation": "BMDC",
+        "title": "Registration No. DENTAL-DEMO-0000"
+      },
+      {
+        "abbreviation": "International Fellowship",
+        "title": "Advanced Endodontic Clinical Training"
+      }
+    ],
+    "academicPosition": {
+      "role": "Associate Professor",
+      "department": "Department of Conservative Dentistry & Endodontics",
+      "institution": "Dhaka Dental Medical Institute",
+      "period": "2022–Present"
+    },
+    "credentialsAndSpecialization": {
+      "dentalSpecialization": "Restorative Dentistry & Endodontics",
+      "coreProfessionalCredentials": [
+        "BDS — Bachelor of Dental Surgery",
+        "MDS — Master of Dental Surgery in Conservative Dentistry & Endodontics",
+        "FCPS — Fellowship in Conservative Dentistry & Endodontics",
+        "Consultant — Restorative Dentistry & Endodontics",
+        "BMDC — Registration No. DENTAL-DEMO-0000",
+        "International Fellowship — Advanced Endodontic Clinical Training"
+      ],
+      "areasOfSpecialistExpertise": [
+        "Dental Pain & Diagnosis",
+        "Endodontic Treatment",
+        "Restorative Dentistry",
+        "Tooth Preservation",
+        "Preventive Dental Care",
+        "Complex Treatment Planning"
+      ]
+    },
+    "education": [
+      {
+        "period": "2007–2012",
+        "qualification": "Bachelor of Dental Surgery (BDS)",
+        "institution": "Dhaka Dental College",
+        "details": "Undergraduate training in dental surgery, restorative dentistry, oral medicine, periodontology, prosthodontics, pediatric dentistry, and oral surgery."
+      },
+      {
+        "period": "2014–2017",
+        "qualification": "Master of Dental Surgery (MDS) in Conservative Dentistry & Endodontics",
+        "institution": "University Dental Hospital, Dhaka",
+        "details": "Advanced postgraduate training in restorative treatment planning, endodontic diagnosis, tooth preservation, and clinical case management."
+      },
+      {
+        "period": "2018",
+        "qualification": "Fellowship in Conservative Dentistry & Endodontics (FCPS)",
+        "institution": "Bangladesh College of Physicians and Surgeons",
+        "details": "Advanced specialist training in diagnosis and management of restorative and endodontic conditions."
+      }
+    ],
+    "internationalTraining": [
+      {
+        "period": "2020",
+        "qualification": "International Fellowship in Advanced Endodontics",
+        "institution": "European Endodontic Training Centre",
+        "details": "Focused clinical training in contemporary endodontic diagnosis, treatment planning, and microsurgical principles."
+      },
+      {
+        "period": "2021",
+        "qualification": "Advanced Continuing Education in Adhesive & Minimally Invasive Dentistry",
+        "institution": "International Dental Education Programme",
+        "details": "Focused training in adhesive restorative techniques, minimally invasive treatment concepts, and restoration longevity."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2012–2014",
+        "role": "Dental Intern & Junior Clinician",
+        "institution": "Teaching Hospital Dental Service, Dhaka",
+        "description": "Built foundational clinical experience in diagnosis, restorative care, periodontal care, oral surgery fundamentals, and patient communication."
+      },
+      {
+        "period": "2015–2018",
+        "role": "General Dental Practitioner",
+        "institution": "Private Dental Practice, Dhaka",
+        "description": "Provided routine dental consultations, preventive care, restorative treatment, emergency dental assessments, and follow-up care."
+      },
+      {
+        "period": "2019–2021",
+        "role": "Specialist Dentist, Restorative & Endodontic Care",
+        "institution": "Specialist Dental Centre, Dhaka",
+        "description": "Developed a focused clinical practice in tooth preservation, dental pain assessment, endodontic treatment planning, and complex restorative care."
+      },
+      {
+        "period": "2022–Present",
+        "role": "Consultant, Restorative Dentistry & Endodontics",
+        "institution": "Dhaka Dental Medical Institute & Private Specialist Practice",
+        "description": "Provides specialist consultations centered on diagnosis, conservative treatment planning, patient education, and long-term oral maintenance."
+      }
+    ],
+    "career": [
+      {
+        "period": "2012–2014",
+        "role": "Dental Intern & Junior Clinician",
+        "institution": "Teaching Hospital Dental Service, Dhaka",
+        "description": "Built foundational clinical experience in diagnosis, restorative care, periodontal care, oral surgery fundamentals, and patient communication."
+      },
+      {
+        "period": "2015–2018",
+        "role": "General Dental Practitioner",
+        "institution": "Private Dental Practice, Dhaka",
+        "description": "Provided routine dental consultations, preventive care, restorative treatment, emergency dental assessments, and follow-up care."
+      },
+      {
+        "period": "2019–2021",
+        "role": "Specialist Dentist, Restorative & Endodontic Care",
+        "institution": "Specialist Dental Centre, Dhaka",
+        "description": "Developed a focused clinical practice in tooth preservation, dental pain assessment, endodontic treatment planning, and complex restorative care."
+      },
+      {
+        "period": "2022–Present",
+        "role": "Consultant, Restorative Dentistry & Endodontics",
+        "institution": "Dhaka Dental Medical Institute & Private Specialist Practice",
+        "description": "Provides specialist consultations centered on diagnosis, conservative treatment planning, patient education, and long-term oral maintenance."
+      }
+    ],
+    "qualifications": [
+      {
+        "period": "2007–2012",
+        "qualification": "Bachelor of Dental Surgery (BDS)",
+        "institution": "Dhaka Dental College",
+        "details": "Undergraduate training in dental surgery, restorative dentistry, oral medicine, periodontology, prosthodontics, pediatric dentistry, and oral surgery."
+      },
+      {
+        "period": "2014–2017",
+        "qualification": "Master of Dental Surgery (MDS) in Conservative Dentistry & Endodontics",
+        "institution": "University Dental Hospital, Dhaka",
+        "details": "Advanced postgraduate training in restorative treatment planning, endodontic diagnosis, tooth preservation, and clinical case management."
+      },
+      {
+        "period": "2018",
+        "qualification": "Fellowship in Conservative Dentistry & Endodontics (FCPS)",
+        "institution": "Bangladesh College of Physicians and Surgeons",
+        "details": "Advanced specialist training in diagnosis and management of restorative and endodontic conditions."
+      },
+      {
+        "period": "2020",
+        "qualification": "International Fellowship in Advanced Endodontics",
+        "institution": "European Endodontic Training Centre",
+        "details": "Focused clinical training in contemporary endodontic diagnosis, treatment planning, and microsurgical principles."
+      },
+      {
+        "period": "2021",
+        "qualification": "Advanced Continuing Education in Adhesive & Minimally Invasive Dentistry",
+        "institution": "International Dental Education Programme",
+        "details": "Focused training in adhesive restorative techniques, minimally invasive treatment concepts, and restoration longevity."
+      }
+    ],
+    "memberships": [
+      {
+        "organization": "Bangladesh Dental Society",
+        "role": "Professional Member"
+      },
+      {
+        "organization": "Bangladesh College of Physicians and Surgeons",
+        "role": "Fellow"
+      },
+      {
+        "organization": "International Association for Dental Research",
+        "role": "Professional Member"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Excellence in Conservative Dentistry",
+        "year": "2022",
+        "institution": "Dhaka Dental Medical Institute"
+      },
+      {
+        "title": "Clinical Teaching Recognition",
+        "year": "2021",
+        "institution": "Department of Conservative Dentistry & Endodontics"
+      },
+      {
+        "title": "Outstanding Postgraduate Clinical Performance",
+        "year": "2017",
+        "institution": "University Dental Hospital, Dhaka"
+      }
+    ]
+  },
+  "qualifications": [
+    "Demo BDS profile field",
+    "Demo advanced restorative dentistry training field",
+    "Demo endodontic care focus field"
+  ],
+  "professionalInfo": [
+    "Individual consultation model, not a multi-doctor clinic directory",
+    "Focus on tooth preservation, prevention, and patient education",
+    "Treatment plans explained with options, maintenance needs, and realistic expectations"
+  ],
+  "heroEyebrow": "Your Smile, Our Priority",
+  "heroTitle": "Quality Dental Care, Trusted By Families Everywhere",
+  "heroHighlight": "Everywhere",
+  "heroDescription": "Personal dental care and specialist-level guidance designed to help patients protect natural teeth, understand treatment options, and feel confident before every appointment.",
+  "appointmentCta": "Appointment",
+  "phone": "+880 1712-000000",
+  "secondaryPhone": "+880 1812-000000",
+  "email": "hello@drnadiakarim.example",
+  "secondaryEmail": "care@drnadiakarim.example",
+  "address": "Dental Chamber, Gulshan Avenue, Dhaka, Bangladesh",
+  "officeHours": [
+    "Saturday - Thursday: 4:00 PM - 9:00 PM",
+    "Friday: By prior appointment"
+  ],
+  "profileImage": "/assets/img/banner-img-h2.png",
+  "aboutImages": {
+    "main": "/assets/img/about-img-h2.jpg",
+    "side": "/assets/img/about-img1-h2.jpg",
+    "generalMain": "/assets/img/about-img2-h1.jpg",
+    "generalSide": "/assets/img/about-img1-h1.jpg"
+  },
+  "intro": "This personal dental specialist website is structured for a single clinician profile. It can be adapted with verified qualifications, registration information, chamber details, and consented clinical media before launch.",
+  "aboutTitle": "Delivering Trusted Dental Care With Precision",
+  "aboutDescription": "The care approach centers on careful diagnosis, conservative treatment planning, clear communication, and long-term oral-health maintenance. Patients receive explanation-first consultations so they can make informed decisions without feeling rushed.",
+  "homeAboutTitle": "We Are Delivering Trusted Dental Care Anywhere",
+  "homeAboutDescription": "A calmer dental visit starts with clear information. This personal practice model focuses on prevention, natural tooth preservation, and practical guidance that supports everyday oral health.",
+  "highlights": [
+    "Personal consultation with the dental specialist",
+    "Tooth-preserving endodontic and restorative planning",
+    "Preventive care and gum-health guidance",
+    "Clear aftercare instructions and maintenance planning"
+  ],
+  "stats": [
+    {
+      "value": "12+",
+      "numeric": 12,
+      "suffix": "+",
+      "label": "Years Focused Practice"
+    },
+    {
+      "value": "94%",
+      "numeric": 94,
+      "suffix": "%",
+      "label": "Demo Patient Clarity"
+    },
+    {
+      "value": "3k+",
+      "numeric": 3,
+      "suffix": "k+",
+      "label": "Dental Consultations"
+    },
+    {
+      "value": "10+",
+      "numeric": 10,
+      "suffix": "+",
+      "label": "Core Services"
+    }
+  ],
+  "questionBox": {
+    "title": "Have Any Question?",
+    "description": "Friendly appointment support for dental pain, preventive visits, and treatment planning questions."
+  },
+  "happyPatients": {
+    "value": "2,000+",
+    "label": "Demo Patient Visits",
+    "image": "/assets/img/patient-img-h2.png"
+  },
+  "emergencyNote": "For severe dental pain, swelling, facial trauma, fever, or uncontrolled bleeding, seek urgent professional care. This website does not replace emergency medical advice."
+}
