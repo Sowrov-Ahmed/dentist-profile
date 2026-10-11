@@ -1,9 +1,9 @@
 {
   "eyebrow": "Appointment",
   "title": "Request a Dental Consultation",
-  "description": "Choose a consultation location, appointment type, preferred date, and the reason for your visit. This demo workflow records the request only; the chamber team would confirm availability before any real appointment is finalized.",
+  "description": "Choose a consultation location, appointment type, and preferred date, then briefly describe your concern. A chamber team member confirms availability with you before any appointment is finalized.",
   "submitLabel": "Request appointment",
-  "successMessage": "Thank you. Your demo appointment request has been received. A chamber team member would contact you to confirm availability.",
+  "successMessage": "Thank you. Your appointment request has been received. A chamber team member will contact you to confirm availability.",
   "consultationTypes": [
     {
       "id": "new_patient",

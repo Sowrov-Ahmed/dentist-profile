@@ -1,28 +1,28 @@
 [
   {
-    "name": "Demo Patient Feedback",
-    "role": "Preventive Visit",
+    "name": "Preventive Care Visit",
+    "role": "Routine check-up and gum health review",
     "image": "/assets/img/testi-h1-img1.png",
     "quote": "The consultation felt calm and clear. I understood what needed attention now and what could be monitored with better home care.",
     "rating": 4
   },
   {
-    "name": "Demo Patient Feedback",
-    "role": "Root Canal Consultation",
+    "name": "Endodontic Consultation",
+    "role": "Root canal treatment planning",
     "image": "/assets/img/testi-h1-img2.png",
     "quote": "The treatment plan was explained step by step, including alternatives, restoration needs, and aftercare before any decision was made.",
     "rating": 4
   },
   {
-    "name": "Demo Patient Feedback",
-    "role": "Restorative Planning",
+    "name": "Restorative Planning Visit",
+    "role": "Tooth-preserving restoration",
     "image": "/assets/img/testi-h1-img3.png",
     "quote": "I appreciated the focus on preserving the natural tooth and choosing the least aggressive suitable option.",
     "rating": 4
   },
   {
-    "name": "Demo Patient Feedback",
-    "role": "Smile Consultation",
+    "name": "Smile Planning Consultation",
+    "role": "Aesthetic consultation and sequencing",
     "image": "/assets/img/testi-h1-img3.png",
     "quote": "The smile planning discussion was realistic and health-first, not rushed into cosmetic treatment.",
     "rating": 4

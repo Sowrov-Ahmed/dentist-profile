@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { PageHero } from "@/components/ui/PageHero";
 import { CaseStudyDetailsSourceDental } from "@/features/source/CaseStudyDetailsSourceDental";
 import { getCaseStudies, getCaseStudyBySlug, getRelatedCaseServices, getRelatedCaseStudies } from "@/features/cases/case.service";
+import { getCaseStudyDetailHero } from "@/features/hero/pageHero.service";
 import { getServices } from "@/features/services/service.service";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import type { CaseStudy } from "@/types/content";
@@ -32,12 +33,16 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
     notFound();
   }
 
-  const [cases, services] = await Promise.all([getCaseStudies(), getServices()]);
+  const [cases, services, hero] = await Promise.all([
+    getCaseStudies(),
+    getServices(),
+    getCaseStudyDetailHero(item)
+  ]);
   const relatedServices = getRelatedCaseServices(services, item, services.length);
   const relatedCases = getRelatedCaseStudies(cases, item, 3);
 
   return <>
-    <Breadcrumb title="Case Study" current={item.title} sourceTemplate />
+    <PageHero {...hero} />
     <CaseStudyDetailsSourceDental item={item} relatedServices={relatedServices} relatedCases={relatedCases} />
   </>;
 }

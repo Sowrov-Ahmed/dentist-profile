@@ -4,22 +4,11 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import { ApiClientError } from "@/types/api";
 import type { AppointmentContent, AppointmentSubmissionRequest, Chamber, ChamberFees } from "@/types/content";
 import { Icon } from "@/components/ui/Icon";
-import { formatAppointmentFee, getAppointmentConsultationType, getAppointmentFee } from "../appointment.domain";
+import { EmptyState } from "@/components/ui/DataState";
+import { AppointmentFieldErrors, formatAppointmentFee, getAppointmentConsultationType, getAppointmentFee, todayInputValue, validateAppointmentSubmission } from "../appointment.domain";
 import { submitAppointmentRequest } from "../appointment.service";
 
 type FormState = "idle" | "submitting" | "success" | "error";
-
-type FieldErrors = Partial<Record<keyof AppointmentSubmissionRequest, string[]>>;
-
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function todayInputValue() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
 
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/\s/g, "")}`;
@@ -42,13 +31,24 @@ function formatDateForSummary(date: string) {
 
 export function AppointmentRequestForm({ content, chambers, selectedChamber }: { content: AppointmentContent; chambers: Chamber[]; selectedChamber: Chamber | null }) {
   const defaultConsultationType = content.consultationTypes[0]?.id || "";
-  const minDate = useMemo(() => todayInputValue(), []);
+  /**
+   * `min` has to be byte-identical on the server and on the first client render, otherwise
+   * React reports a hydration mismatch and discards the server markup for this subtree. The
+   * server renders in UTC while the visitor is on their own local date, so the two disagree
+   * for part of every day (6h/24h at UTC+6). Resolving it after mount keeps the first paint
+   * deterministic; validation falls back to computing it at submit time until it is known.
+   */
+  const [minDate, setMinDate] = useState<string | null>(null);
   const [state, setState] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<FieldErrors>({});
+  const [errors, setErrors] = useState<AppointmentFieldErrors>({});
   const [chamberId, setChamberId] = useState(selectedChamber?.id || "");
   const [consultationTypeId, setConsultationTypeId] = useState<string>(defaultConsultationType);
   const [preferredDate, setPreferredDate] = useState("");
+
+  useEffect(() => {
+    setMinDate(todayInputValue());
+  }, []);
 
   useEffect(() => {
     setChamberId(selectedChamber?.id || "");
@@ -60,17 +60,12 @@ export function AppointmentRequestForm({ content, chambers, selectedChamber }: {
   const isSubmitting = state === "submitting";
   const hasChambers = chambers.length > 0;
 
-  function validate(payload: AppointmentSubmissionRequest): FieldErrors {
-    const nextErrors: FieldErrors = {};
-    if (!payload.chamberId || !chambers.some((chamber) => chamber.id === payload.chamberId)) nextErrors.chamberId = ["Please select a consultation location."];
-    if (!payload.consultationType || !content.consultationTypes.some((item) => item.id === payload.consultationType)) nextErrors.consultationType = ["Please select a consultation type."];
-    if (!payload.preferredDate) nextErrors.preferredDate = ["Please select a preferred date."];
-    else if (payload.preferredDate < minDate) nextErrors.preferredDate = ["Please choose today or a future date."];
-    if (!payload.fullName || payload.fullName.trim().length < 2) nextErrors.fullName = ["Full name is required."];
-    if (!payload.phone || !/^[+\d][+\d\s().-]{6,}$/.test(payload.phone.trim())) nextErrors.phone = ["Please enter a valid phone number."];
-    if (!payload.email || !emailPattern.test(payload.email.trim())) nextErrors.email = ["Please enter a valid email address."];
-    if (!payload.reason || payload.reason.trim().length < 10) nextErrors.reason = ["Please describe the reason in at least 10 characters."];
-    return nextErrors;
+  function validate(payload: AppointmentSubmissionRequest): AppointmentFieldErrors {
+    return validateAppointmentSubmission(payload, {
+      chambers,
+      consultationTypeIds: content.consultationTypes.map((item) => item.id),
+      earliestDate: minDate ?? todayInputValue()
+    });
   }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -114,14 +109,17 @@ export function AppointmentRequestForm({ content, chambers, selectedChamber }: {
   }
 
   return <div className="source-appointment-shell source-appointment-shell-compact" data-reveal="up">
-    <form className="source-appointment-request-form source-appointment-request-form-compact" onSubmit={submit} noValidate>
-      <div className="source-appointment-card-header">
+    <form className="source-appointment-request-form source-appointment-request-form-compact !shadow-[0_18px_44px_rgba(14,29,76,.08)]" onSubmit={submit} noValidate>
+      <div className="source-appointment-card-header !mb-7 !border-b !border-[#e4e8ed] !pb-6">
         <p className="source-chambers-eyebrow">Appointment request</p>
         <h3>Request an appointment</h3>
-        <p>Choose your preferred consultation details and provide your contact information. Our team will confirm availability with you.</p>
+        <p>Choose a consultation location and type, then add your preferred date and contact details.</p>
       </div>
 
-      {!hasChambers ? <div className="source-appointment-inline-note" role="status">Loading chamber options from the consultation directory...</div> : null}
+      {!hasChambers ? <EmptyState
+        title="No consultation locations available"
+        message="The consultation directory is currently empty, so an appointment request cannot be submitted yet. Please try again shortly or contact the clinic directly."
+      /> : null}
 
       <fieldset className="source-appointment-compact-fields" disabled={isSubmitting}>
         <label className="source-appointment-field" htmlFor="appointment-chamber">
@@ -173,7 +171,7 @@ export function AppointmentRequestForm({ content, chambers, selectedChamber }: {
             id="appointment-date"
             name="preferredDate"
             type="date"
-            min={minDate}
+            min={minDate ?? undefined}
             value={preferredDate}
             onChange={(event) => {
               setPreferredDate(event.target.value);
@@ -248,35 +246,46 @@ export function AppointmentRequestForm({ content, chambers, selectedChamber }: {
         </label>
       </fieldset>
 
-      <div className="source-appointment-submit-row source-appointment-submit-row-compact">
-        <button type="submit" disabled={isSubmitting || !hasChambers}>{isSubmitting ? "Submitting request..." : "Request appointment"} <Icon name="arrow" size={17} /></button>
-        <p>This request does not confirm a booking. The chamber team will contact you to confirm availability.</p>
+      {/*
+        The notice is read before the visitor commits to the button, so it sits directly above it.
+        `!grid-cols-1` collapses the legacy two-column row (button capped at 260px beside the notice)
+        so the submit button spans the full width of the row at every breakpoint; `!w-full` states
+        that intent in Tailwind and survives the legacy `width: 100%` rule.
+      */}
+      <div className="source-appointment-submit-row source-appointment-submit-row-compact !grid-cols-1">
+        <p>This request does not confirm a booking. The chamber team will confirm your appointment by phone or email.</p>
+        <button type="submit" className="!w-full" disabled={isSubmitting || !hasChambers}>{isSubmitting ? "Submitting request..." : "Request appointment"} <Icon name="arrow" size={17} /></button>
       </div>
 
       {message ? <div className="source-appointment-status" role={state === "success" ? "status" : "alert"} data-state={state === "success" ? "success" : "error"}>{message}</div> : null}
     </form>
 
     <aside className="source-appointment-live-summary" aria-label="Consultation summary" aria-live="polite">
-      <div className="source-appointment-summary-card">
+      <div className="source-appointment-summary-card !shadow-[0_18px_44px_rgba(14,29,76,.08)]">
         <p className="source-chambers-eyebrow">Consultation summary</p>
         <h3>{activeChamber?.name || "Select a chamber"}</h3>
         {activeChamber ? <>
           <p className="source-chamber-address"><Icon name="pin" size={18} /> <span>{activeChamber.address}</span></p>
+          {/*
+            Summary typography: labels are set small and medium so they recede, and values stay
+            semibold navy instead of extra-bold, which keeps the row readable in the narrow ~92px
+            label column and restores a clear label -> value -> heading hierarchy.
+          */}
           <dl className="source-appointment-summary-list">
-            <div><dt>Primary status</dt><dd>{activeChamber.primary ? "Primary chamber" : activeChamber.tag}</dd></div>
-            <div><dt>Consultation type</dt><dd>{activeConsultationType?.label || "Not selected yet"}</dd></div>
-            <div><dt>Preferred date</dt><dd>{formatDateForSummary(preferredDate)}</dd></div>
-            <div><dt>Schedule</dt><dd>{describeSchedule(activeChamber).map((item) => <span key={item}>{item}</span>)}</dd></div>
-            <div><dt>Phone</dt><dd><a href={phoneHref(activeChamber.phone)}>{activeChamber.phone}</a></dd></div>
+            <div><dt className="!text-[13.5px] !leading-[1.5] !font-medium">Primary status</dt><dd className="!font-semibold">{activeChamber.primary ? "Primary chamber" : activeChamber.tag}</dd></div>
+            <div><dt className="!text-[13.5px] !leading-[1.5] !font-medium">Consultation type</dt><dd className="!font-semibold">{activeConsultationType?.label || "Not selected yet"}</dd></div>
+            <div><dt className="!text-[13.5px] !leading-[1.5] !font-medium">Preferred date</dt><dd className="!font-semibold">{formatDateForSummary(preferredDate)}</dd></div>
+            <div><dt className="!text-[13.5px] !leading-[1.5] !font-medium">Schedule</dt><dd className="!font-semibold">{describeSchedule(activeChamber).map((item) => <span key={item}>{item}</span>)}</dd></div>
+            <div><dt className="!text-[13.5px] !leading-[1.5] !font-medium">Phone</dt><dd className="!font-semibold"><a className="focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[4px] focus-visible:outline-teal/45" href={phoneHref(activeChamber.phone)}>{activeChamber.phone}</a></dd></div>
           </dl>
           <div className="source-appointment-summary-actions">
             <a href={activeChamber.mapUrl} target="_blank" rel="noopener noreferrer"><Icon name="mapLocation" size={18} /> View map</a>
           </div>
-        </> : <p className="source-appointment-summary-copy">Choose a consultation location to review chamber address, schedule, contact number, and map link.</p>}
+        </> : <p className="source-appointment-summary-copy">Choose a consultation location to see its address, schedule, and contact details.</p>}
       </div>
 
       <div className="source-appointment-fee-card" id="appointment-fee-preview">
-        <span>Consultation fee</span>
+        <span className="!font-semibold">Consultation fee</span>
         <strong>{activeChamber && activeConsultationType ? formatAppointmentFee(activeFee) : "—"}</strong>
         <p>{activeChamber && activeConsultationType ? `${activeConsultationType.label} at ${activeChamber.name}` : "Select a chamber and consultation type to view the fee."}</p>
       </div>

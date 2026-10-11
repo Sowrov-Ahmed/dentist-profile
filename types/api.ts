@@ -7,7 +7,7 @@ export type ApiError = {
 export type ApiMeta = {
   requestId: string;
   generatedAt: string;
-  source: "demo-json" | "external-api";
+  source: "bundled-content" | "remote-api";
   count?: number;
 };
 

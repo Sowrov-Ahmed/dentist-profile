@@ -79,6 +79,8 @@ export type DoctorAboutSpecialist = {
     communicationCommitment: string;
   };
   credentials: DoctorAboutSpecialistCredential[];
+  careerSectionTitle?: string;
+  trainingSectionTitle?: string;
   academicPosition: {
     role: string;
     department: string;
@@ -245,6 +247,31 @@ export type BlogPost = {
   };
   commentsList: BlogComment[];
 };
+
+/**
+ * Page-level hero copy. Every route renders the same eyebrow / H1 / supporting-paragraph
+ * structure, so the content is data rather than markup duplicated across ten pages.
+ */
+export type PageHeroContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
+/** Identifies one hero record in the `/page-heroes` response. */
+export type PageHeroKey =
+  | "about"
+  | "services"
+  | "serviceDetail"
+  | "caseStudies"
+  | "caseStudyDetail"
+  | "blog"
+  | "blogDetail"
+  | "chambers"
+  | "contact"
+  | "appointment";
+
+export type PageHeroMap = Record<PageHeroKey, PageHeroContent>;
 
 export type HomeContent = {
   servicesIntro: {

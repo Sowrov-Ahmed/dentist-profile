@@ -3,7 +3,7 @@
   "tagline": "Dental Specialist",
   "siteUrl": "http://localhost:3000",
   "logo": "/assets/img/logo.svg",
-  "whiteLogo": "/assets/img/logo.png",
+  "whiteLogo": "/assets/img/logo.svg",
   "navigationSource": "data/navigation.json",
   "socialLinks": [
     {
@@ -26,9 +26,9 @@
   "seo": {
     "titleTemplate": "%s | Dr. Nadia Karim Dental Specialist",
     "defaultTitle": "Dr. Nadia Karim - Personal Dental Specialist Website",
-    "description": "Demo personal website for an individual dental specialist with preventive care, endodontics, restorative dentistry, smile planning, case education, and patient articles."
+    "description": "Personal website of an individual dental specialist offering preventive care, endodontics, restorative dentistry, smile planning, case education, and patient articles."
   },
-  "disclaimer": "Demo website content. Replace profile, qualifications, testimonials, and cases with verified consented information before public launch.",
+  "disclaimer": "Content on this website is provided for general information only and does not replace a direct clinical consultation. Appointments are confirmed by the clinic team, and treatment decisions are made after examination and discussion.",
   "footerCopy": "Personal dental specialist website for clear consultation, preventive guidance, restorative planning, and patient education.",
   "newsletterCopy": "Subscribe For Get Latest Updates",
   "newsletterSuccessMessage": "Thanks for subscribing.",

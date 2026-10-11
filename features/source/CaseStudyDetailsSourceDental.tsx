@@ -32,7 +32,7 @@ export function CaseStudyDetailsSourceDental({ item, relatedServices, relatedCas
                   <li>Category: {item.label}</li>
                   <li>Case Number: {item.number}</li>
                   <li>Primary Focus: {primaryService}</li>
-                  <li>Record Type: Demo planning case</li>
+                  <li>Record Type: Clinical planning case</li>
                 </ul>
 
                 <h3>Challenge</h3><p>{item.challenge}</p>
@@ -56,7 +56,7 @@ export function CaseStudyDetailsSourceDental({ item, relatedServices, relatedCas
               <li><span>Category</span><strong>{item.label}</strong></li>
               <li><span>Case No.</span><strong>{item.number}</strong></li>
               <li><span>Primary Service</span><strong>{primaryService}</strong></li>
-              <li><span>Type</span><strong>Demo Planning</strong></li>
+              <li><span>Type</span><strong>Clinical Planning</strong></li>
             </ul>
           </div>
 

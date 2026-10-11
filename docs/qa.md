@@ -12,7 +12,7 @@ Project root: `/home/user/active-site`
 | `npm run build` | Passed, 44 routes generated/validated |
 | Production server | Passed, running on `0.0.0.0:3000` |
 | Runtime master filesystem references | Passed, no `/home/user/public` or `../public` runtime references |
-| API architecture | Passed, pages use service/API layer and demo routes read JSON data |
+| API architecture | Passed, pages use service/API layer and API routes read JSON data |
 
 ## Route checks
 
@@ -36,16 +36,16 @@ All checked with HTTP requests against the production server.
 
 | Endpoint | Result |
 |---|---:|
-| `GET /api/demo/site` | 200 |
-| `GET /api/demo/navigation` | 200 |
-| `GET /api/demo/doctor` | 200 |
-| `GET /api/demo/services` | 200 |
-| `GET /api/demo/services/root-canal-treatment` | 200 |
-| `GET /api/demo/case-studies` | 200 |
-| `GET /api/demo/blog` | 200 |
-| `GET /api/demo/testimonials` | 200 |
-| `GET /api/demo/faqs` | 200 |
-| `POST /api/demo/contact` valid payload | 200 |
+| `GET /api/site` | 200 |
+| `GET /api/navigation` | 200 |
+| `GET /api/doctor` | 200 |
+| `GET /api/services` | 200 |
+| `GET /api/services/root-canal-treatment` | 200 |
+| `GET /api/case-studies` | 200 |
+| `GET /api/blog` | 200 |
+| `GET /api/testimonials` | 200 |
+| `GET /api/faqs` | 200 |
+| `POST /api/contact` valid payload | 200 |
 
 ## Master fidelity verification
 
@@ -79,7 +79,7 @@ Master CSS responsive breakpoints were restored by copying the master global sty
 | Issue | Cause | Fix | Verification |
 |---|---|---|---|
 | Home was using a generic hybrid layout rather than Home-2. | Initial active implementation used simplified custom sections. | Rebuilt Home with Home-2 class structure and data-driven content in `HomeTwoDental`. | Route `/` returns 200 and contains all Home-2 section classes. |
-| Root content now lives in organized JSON files under `data/`. | Initial scaffold grouped some content as temporary demo files. | Removed stale duplicate demo content and updated demo repository imports to root JSON files. | API routes return data from root JSON and build passes. |
+| Root content now lives in organized JSON files under `data/`. | Initial scaffold grouped some content as temporary content files. | Removed stale duplicate content and updated content source imports to root JSON files. | API routes return data from root JSON and build passes. |
 | Service/case/blog sections had too little visual density. | Earlier content had too few items for master grid density. | Added 6 services, 6 cases, 8 blog posts, 4 testimonials, FAQs, and contact content. | Listing pages render complete source grids and route checks pass. |
 | Detail pages were visually simplified. | Active detail layouts did not match source detail card/sidebar structures. | Rebuilt service, case, and blog detail pages with master source detail class hierarchy. | Dynamic detail routes return 200 and contain expected source detail classes. |
 | Master motion behavior was simplified. | Active `MotionProvider` only handled basic reveals. | Restored master reveal/title/parallax/mouse motion behavior with reduced-motion handling. | Build/lint/typecheck pass; sections use original `data-reveal`, `data-title-reveal`, and parallax attributes. |
@@ -87,4 +87,4 @@ Master CSS responsive breakpoints were restored by copying the master global sty
 
 ## Screenshot note
 
-The sandbox does not provide a browser screenshot binary such as Chromium, Firefox, Playwright, or wkhtmltoimage. Visual QA was therefore performed through direct source-to-source template inspection, restored master class/asset structures, runtime HTML verification, route checks, and production preview startup. The live preview remains available for human visual inspection on port `3000`.
+The sandbox does not provide a browser screenshot binary such as Chromium, Firefox, Playwright, or wkhtmltoimage. Visual QA was therefore performed through direct source-to-source template inspection, restored master class/asset structures, runtime HTML verification, route checks, and a production build started on port `3000`. That server remains available for human visual inspection.

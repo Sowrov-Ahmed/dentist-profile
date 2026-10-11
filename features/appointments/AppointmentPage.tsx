@@ -1,9 +1,9 @@
-import type { AppointmentContent, Chamber } from "@/types/content";
+import type { AppointmentContent, Chamber, PageHeroContent } from "@/types/content";
 import { ScopedRevealGuard } from "@/features/source/ScopedRevealGuard";
 import { AppointmentHeroSection } from "./sections/AppointmentHeroSection";
 import { AppointmentRequestSection } from "./sections/AppointmentRequestSection";
 
-export function AppointmentPage({ content, chambers, selectedChamber }: { content: AppointmentContent; chambers: Chamber[]; selectedChamber: Chamber | null }) {
+export function AppointmentPage({ hero, content, chambers, selectedChamber }: { hero: PageHeroContent; content: AppointmentContent; chambers: Chamber[]; selectedChamber: Chamber | null }) {
   const revealWatchKey = [
     "appointment",
     selectedChamber?.id || "none",
@@ -13,7 +13,7 @@ export function AppointmentPage({ content, chambers, selectedChamber }: { conten
 
   return <div data-appointment-page-scope>
     <ScopedRevealGuard scopeSelector="[data-appointment-page-scope]" watchKey={revealWatchKey} />
-    <AppointmentHeroSection content={content} selectedChamber={selectedChamber} />
+    <AppointmentHeroSection hero={hero} selectedChamber={selectedChamber} />
     <AppointmentRequestSection content={content} chambers={chambers} selectedChamber={selectedChamber} />
   </div>;
 }

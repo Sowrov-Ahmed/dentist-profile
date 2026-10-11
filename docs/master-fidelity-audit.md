@@ -30,7 +30,7 @@ Master template inspected read-only from `/home/user`.
 | Case Details | Detail card, service sidebar, newsletter widget, challenge/approach/outcome content | Rebuilt dynamically from case slug and JSON data. |
 | Blog Grid | 8-card blog grid, sidebar search/services/latest/newsletter, pagination | Rebuilt with 8 realistic dental posts. |
 | Blog Details | Detail image, metadata, content, checklist, video block, quote, tags/share, comments, reply form, sidebar | Rebuilt dynamically from blog slug and JSON data. |
-| Contact | Contact info cards, source form, map iframe | Rebuilt with data-driven contact information and demo API submission. |
+| Contact | Contact info cards, source form, map iframe | Rebuilt with data-driven contact information and API submission. |
 
 ## Data completion
 
@@ -47,10 +47,10 @@ Root JSON content files now exist in `data/`:
 - `faqs.json`
 - `contact.json`
 
-The demo repository reads these root files and exposes them through `/api/demo/...` so pages continue using:
+The content source reads these root files and exposes them through `/api/...` so pages continue using:
 
 ```txt
-Page → Feature/Domain Logic → API Service → Demo API → JSON Data
+Page → Feature/Domain Logic → API Service → API → Content Source
 ```
 
 ## Animation and interaction restoration

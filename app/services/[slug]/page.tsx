@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { PageHero } from "@/components/ui/PageHero";
 import { ServiceDetailsSourceDental } from "@/features/source/ServiceDetailsSourceDental";
+import { getServiceDetailHero } from "@/features/hero/pageHero.service";
 import { getRelatedServices, getServiceBySlug, getServices } from "@/features/services/service.service";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import type { DentalService } from "@/types/content";
@@ -31,11 +32,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
-  const services = await getServices();
+  const [services, hero] = await Promise.all([
+    getServices(),
+    getServiceDetailHero(service)
+  ]);
   const relatedServices = getRelatedServices(services, service, services.length);
 
   return <>
-    <Breadcrumb title="Service" current={service.title} sourceTemplate />
+    <PageHero {...hero} />
     <ServiceDetailsSourceDental service={service} relatedServices={relatedServices} />
   </>;
 }

@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
-import { submitAppointmentRequest } from "@/features/dental/submission.service";
-import type { BlogPost, DentalService, DoctorProfile, Testimonial } from "@/types/content";
+import type { AppointmentContent, BlogPost, Chamber, DentalService, DoctorProfile, HomeContent, Testimonial } from "@/types/content";
+import { HomeTwoAppointmentSection } from "@/features/home/sections/HomeTwoAppointmentSection";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/DataState";
 import { AnimatedChars, TitleIcon } from "@/components/source/SourceHelpers";
@@ -37,63 +37,7 @@ export function SourceServiceGrid({ services }: { services: DentalService[] }) {
   </section>;
 }
 
-export function SourceServiceAppointment({ doctor, services }: { doctor: DoctorProfile; services: DentalService[] }) {
-  const [sent, setSent] = useState(false);
-  const [message, setMessage] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSubmitting(true);
-    setSent(false);
-    setMessage("");
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    try {
-      const response = await submitAppointmentRequest({
-        name: String(formData.get("name") || ""),
-        email: String(formData.get("email") || ""),
-        service: String(formData.get("department") || ""),
-        preferredDate: String(formData.get("date") || ""),
-        message: "Appointment requested from the dental services page for a consultation."
-      });
-      setMessage(response.message || "Thank you. Your appointment request has been received.");
-      setSent(true);
-      form.reset();
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Please try again.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  return <section className="source-service-appoint" data-reveal="up">
-    <div className="source-page-container">
-      <div className="source-service-appoint-content">
-        <div className="source-service-appoint-head">
-          <div className="source-title source-title-light source-service-appoint-title animation-style2">
-            <p className="source-eyebrow source-eyebrow-light"><TitleIcon />Appointment</p>
-            <h2 className="source-heading source-heading-light source-service-appoint-heading" data-title-reveal aria-label="Make An Appointment For Consulting"><AnimatedChars text="Make An Appointment For Consulting" /></h2>
-          </div>
-          <div className="source-service-callbox">
-            <span><Icon name="headphones" size={30} /></span>
-            <p><small>Call Us 24/7</small><a href={`tel:${doctor.phone.replace(/\s/g, "")}`}>{doctor.phone}</a></p>
-          </div>
-        </div>
-        {sent ? <div className="source-service-appoint-success" role="status">{message}</div> : <form className="source-service-appoint-form" onSubmit={onSubmit} data-reveal="up">
-          <input name="name" type="text" placeholder="Your Name" required />
-          <input name="email" type="email" placeholder="Email Address" required />
-          <select name="department" aria-label="Select Service" defaultValue=""><option value="" disabled>Select Service</option>{services.map((service) => <option key={service.slug}>{service.title}</option>)}</select>
-          <select name="doctor" aria-label="Select Specialist" defaultValue={doctor.name}><option>{doctor.name}</option></select>
-          <input name="date" aria-label="Appointment date" type="date" />
-          <button type="submit">{submitting ? "Submitting..." : "Make An Appointment"}</button>
-        </form>}
-        {!sent && message ? <div className="source-service-appoint-success" role="alert">{message}</div> : null}
-      </div>
-    </div>
-  </section>;
-}
-
-export function SourceTestimonials({ testimonials }: { testimonials: Testimonial[] }) {
+export function SourceTestimonials({ testimonials, title }: { testimonials: Testimonial[]; title: string }) {
   const testimonialsPerLoop = testimonials.length;
   const initialPosition = testimonialsPerLoop + 1;
   const [visible, setVisible] = useState(3);
@@ -207,7 +151,7 @@ export function SourceTestimonials({ testimonials }: { testimonials: Testimonial
       <div className="home-testimonial-head">
         <div className="source-title animation-style2">
           <p className="source-eyebrow"><TitleIcon />Testimonials</p>
-          <h2 className="source-heading home-testimonial-heading" data-title-reveal aria-label="Feedback & Review From Demo Patients"><AnimatedChars text="Feedback & Review From Demo Patients" /></h2>
+          <h2 className="source-heading home-testimonial-heading" data-title-reveal aria-label={title}><AnimatedChars text={title} /></h2>
         </div>
         <div className="home-section-navigation home-testimonial-nav" aria-label="Testimonial carousel controls">
           <button type="button" aria-label="Previous testimonial" onClick={prev}><Icon name="arrow" size={18} /></button>
@@ -263,7 +207,7 @@ export function SourceBlog({ posts }: { posts: BlogPost[] }) {
   </section>;
 }
 
-export function ServiceSourcePage({ doctor, services, testimonials, posts }: { doctor: DoctorProfile; services: DentalService[]; testimonials: Testimonial[]; posts: BlogPost[] }) {
+export function ServiceSourcePage({ doctor, services, testimonials, posts, appointment, appointmentContent, chambers, testimonialTitle }: { doctor: DoctorProfile; services: DentalService[]; testimonials: Testimonial[]; posts: BlogPost[]; appointment: HomeContent["appointment"]; appointmentContent: AppointmentContent; chambers: Chamber[]; testimonialTitle: string }) {
   const revealWatchKey = [
     "services",
     services.length,
@@ -275,8 +219,11 @@ export function ServiceSourcePage({ doctor, services, testimonials, posts }: { d
   return <div data-service-page-scope>
     <ScopedRevealGuard scopeSelector="[data-service-page-scope]" watchKey={revealWatchKey} />
     <SourceServiceGrid services={services} />
-    <SourceServiceAppointment doctor={doctor} services={services} />
-    <SourceTestimonials testimonials={testimonials} />
+    {/* Canonical Home appointment section, shared verbatim. `overlap={false}` switches off the
+        card's 190px pull-up, which on `/` overlaps only the padding `.home2-cases` reserves but
+        here would cover the service grid above. Everything inside the card is unchanged. */}
+    <HomeTwoAppointmentSection doctor={doctor} appointment={appointment} appointmentContent={appointmentContent} chambers={chambers} overlap={false} />
+    <SourceTestimonials testimonials={testimonials} title={testimonialTitle} />
     <SourceBlog posts={posts} />
   </div>;
 }

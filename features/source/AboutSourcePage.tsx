@@ -326,7 +326,7 @@ function AboutChoose({ doctor, home }: { doctor: DoctorProfile; home: HomeConten
             <div className="about-patient-row">
               <Link className="about-read-btn" href="/services">Read More<span aria-hidden="true" /></Link>
               {doctor.happyPatients ? <div className="about-patient-box">
-                <Image src={doctor.happyPatients.image} alt="Demo patients" width={150} height={60} />
+                <Image src={doctor.happyPatients.image} alt="Patients at the practice" width={150} height={60} />
                 <div className="about-patient-txt"><h3>{doctor.happyPatients.value}</h3><p>{doctor.happyPatients.label}</p></div>
               </div> : null}
             </div>
@@ -343,7 +343,7 @@ function AboutChoose({ doctor, home }: { doctor: DoctorProfile; home: HomeConten
   </section>;
 }
 
-function SourceTestimonials({ testimonials }: { testimonials: Testimonial[] }) {
+function SourceTestimonials({ testimonials, title }: { testimonials: Testimonial[]; title: string }) {
   const testimonialsPerLoop = testimonials.length;
   const initialPosition = testimonialsPerLoop + 1;
   const [visible, setVisible] = useState(3);
@@ -457,7 +457,7 @@ function SourceTestimonials({ testimonials }: { testimonials: Testimonial[] }) {
       <div className="home-testimonial-head">
         <div className="source-title animation-style2">
           <p className="source-eyebrow"><TitleIcon />Testimonials</p>
-          <h2 className="source-heading home-testimonial-heading" data-title-reveal aria-label="Feedback & Review From Demo Patients"><AnimatedChars text="Feedback & Review From Demo Patients" /></h2>
+          <h2 className="source-heading home-testimonial-heading" data-title-reveal aria-label={title}><AnimatedChars text={title} /></h2>
         </div>
         <div className="home-section-navigation home-testimonial-nav" aria-label="Testimonial carousel controls">
           <button type="button" aria-label="Previous testimonial" onClick={prev}><Icon name="arrow" size={18} /></button>
@@ -519,7 +519,7 @@ export function AboutSourcePage({ doctor, home, services, testimonials, posts }:
     <AboutServices services={services} />
     <AboutVideoCounter doctor={doctor} home={home} />
     <AboutChoose doctor={doctor} home={home} />
-    <SourceTestimonials testimonials={testimonials} />
+    <SourceTestimonials testimonials={testimonials} title={home.testimonialTitle} />
     <SourceBlog posts={posts} />
   </>;
 }

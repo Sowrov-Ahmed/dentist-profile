@@ -6,15 +6,17 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { submitAppointmentRequest } from "@/features/dental/submission.service";
-import type { BlogPost, CaseStudy, DentalService, DoctorProfile, HomeContent, Testimonial } from "@/types/content";
+import { submitAppointmentRequest } from "@/features/appointments/appointment.service";
+import { AppointmentFieldErrors, formatAppointmentFee, todayInputValue, validateAppointmentSubmission } from "@/features/appointments/appointment.domain";
+import { buildHomeHeroSlides } from "@/features/home/hero.domain";
+import type { HeroSlide } from "@/features/home/hero.domain";
+import type { AppointmentContent, AppointmentSubmissionRequest, AppointmentSubmissionResponse, BlogPost, CaseStudy, Chamber, ChamberFees, DentalService, DoctorProfile, HomeContent, Testimonial } from "@/types/content";
+import { ApiClientError } from "@/types/api";
 import { Icon } from "@/components/ui/Icon";
-import { Home2SectionTitle } from "@/components/source/SourceHelpers";
+import { AnimatedChars, Home2SectionTitle, TitleIcon } from "@/components/source/SourceHelpers";
 import { Home2Button } from "@/components/source/Home2Button";
-
-function telephoneHref(phone: string) {
-  return `tel:${phone.replace(/\s/g, "")}`;
-}
+import { HomeHeroSlider } from "@/components/source/HomeHeroSlider";
+import { HomeTwoAppointmentSection } from "@/features/home/sections/HomeTwoAppointmentSection";
 
 function formatHome2Date(date: string) {
   const parsed = new Date(`${date}T00:00:00`);
@@ -70,66 +72,84 @@ function HomeServiceCopy({ service }: { service: DentalService }) {
   return <>{service.homeCopy}</>;
 }
 
-function HomeTwoHero({ doctor }: { doctor: DoctorProfile }) {
-  const highlighted = doctor.heroHighlight && doctor.heroTitle.includes(doctor.heroHighlight)
-    ? doctor.heroTitle.replace(doctor.heroHighlight, "")
-    : doctor.heroTitle;
-
+/**
+ * The hero keeps its existing composition: the same background, the same single doctor image
+ * on the right, and the same left-hand content card. Only the card's contents now come from
+ * the typed slide model, so the current wording is preserved as slide 1 while three further
+ * highlights are driven by the same records the rest of the page reads.
+ */
+function HomeTwoHero({ doctor, slides }: { doctor: DoctorProfile; slides: HeroSlide[] }) {
   return <section className="home2-hero overflow-hidden">
     <div className="home2-hero-bg" />
     <div className="home2-container home2-hero-inner">
       <div className="home2-hero-content">
         <div className="home2-hero-box home2-hero-box-sequence">
-          <span className="home2-hero-sub"><span className="home2-title-icon-white" aria-hidden="true" />{doctor.heroEyebrow}</span>
-          <h1>{highlighted}{doctor.heroHighlight ? <span>{doctor.heroHighlight}</span> : null}</h1>
-          <p>{doctor.heroDescription}</p>
-          <div className="home2-hero-actions">
-            <Home2Button href="/contact" className="home2-btn-dark">{doctor.appointmentCta}</Home2Button>
-            <a className="home2-hero-call" href={telephoneHref(doctor.phone)}>
-              <span><Icon name="headphones" size={28} /></span>
-              <p><small>Emergency Call</small>{doctor.phone}</p>
-            </a>
-          </div>
+          <HomeHeroSlider slides={slides} />
         </div>
       </div>
       <div className="home2-hero-person" aria-hidden="true">
-        <Image src={doctor.profileImage} alt={doctor.name} width={655} height={757} priority />
+        <Image src={doctor.profileImage} alt={doctor.name} width={757} height={800} priority sizes="(max-width: 1199px) 70vw, 640px" />
       </div>
     </div>
   </section>;
 }
 
+/**
+ * Home renders the canonical specialist profile that `/about` renders, reusing that section's
+ * own design-system classes (`about-specialist-title/heading/role/focus/bio/meta/badges`) so
+ * the two surfaces stay visually locked together instead of merely resembling each other.
+ *
+ * Only the media column is Home-specific: the two-image collage and the experience badge stay
+ * on the left, exactly where the Home page has always had them. Content comes from the shared,
+ * request-cached `getDoctorProfile()` service, so name, role, focus, academic post and
+ * credentials cannot drift between the two pages.
+ */
 function HomeTwoAbout({ doctor }: { doctor: DoctorProfile }) {
-  return <section className="home2-about" data-reveal="up">
+  const about = doctor.aboutSpecialist;
+  const profile = about.profile;
+  const academic = about.academicPosition;
+
+  return <section className="home2-about !relative !overflow-hidden" aria-label="About Specialist" data-reveal="up">
     <div className="home2-container">
       <div className="home2-about-grid">
+        {/* Single-image treatment: the portrait sits on its soft-green plate, centred in its
+            half of the two-column grid and sized to fill that column. The former collage
+            (experience badge + secondary photo) has been removed, so the column is no longer
+            a 420px frame plus a 195px stack. */}
         <div className="home2-about-images" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
-          <div className="home2-about-main-image"><Image src={doctor.aboutImages.main} alt="Dental consultation" width={420} height={540} data-parallax /></div>
-          <div className="home2-about-side">
-            <div className="home2-experience"><strong>{doctor.stats[0]?.value || "12+"}</strong><span>Years of Focused Care</span></div>
-            <Image src={doctor.aboutImages.side} alt="Dental planning detail" width={195} height={311} />
+          <div className="home2-about-main-image !flex !items-end !justify-center !bg-[var(--home2-soft)] !shadow-[0_26px_60px_-34px_rgba(14,29,76,.32)]">
+            <Image src={profile.portraitImage} alt={profile.portraitAlt} width={470} height={605} sizes="(max-width: 575px) 92vw, (max-width: 1199px) 470px, 470px" />
           </div>
         </div>
-        <div className="home2-about-copy">
-          <Home2SectionTitle eyebrow="About Specialist" title={doctor.homeAboutTitle || doctor.aboutTitle} className="home2-about-title" />
-          <div className="home2-about-right" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
-            <p>{doctor.homeAboutDescription || doctor.aboutDescription}</p>
-            <div className="home2-about-boxes">
-              <div className="home2-question-box">
-                <h3>{doctor.questionBox?.title || "Have Any Question?"}</h3>
-                <p>{doctor.questionBox?.description || doctor.emergencyNote}</p>
-                <a className="home2-question-call" href={telephoneHref(doctor.phone)}>
-                  <span><Icon name="headphones" size={28} /></span>
-                  <p><small>Emergency Call</small>{doctor.phone}</p>
-                </a>
-              </div>
-              <div className="home2-about-list-wrap">
-                <ul>
-                  {doctor.highlights.map((item) => <li key={item}><Icon name="check" size={15} />{item}</li>)}
-                </ul>
-                <Home2Button href="/about">Read More</Home2Button>
-              </div>
-            </div>
+        {/* Copy column mirrors `/about` block for block: identity, title and speciality,
+            biography, academic post, credentials, then the single retained CTA. */}
+        <div className="home2-about-copy about-specialist-copy">
+          <div className="source-title animation-style2 about-specialist-title" data-reveal="up">
+            <p className="source-eyebrow"><TitleIcon />About Specialist</p>
+            <h2 className="source-heading about-specialist-heading" data-title-reveal aria-label={profile.fullName}><AnimatedChars text={profile.fullName} /></h2>
+          </div>
+          <div className="about-specialist-identity" data-reveal="up">
+            <p className="about-specialist-role">{profile.professionalTitle}</p>
+            <p className="about-specialist-focus">{profile.specialistFocus}</p>
+          </div>
+          <p className="about-specialist-bio" data-reveal="up">{profile.shortProfile}</p>
+          <div className="about-specialist-meta" data-reveal="up">
+            <span className="about-specialist-meta-icon" aria-hidden="true"><Icon name="user" size={22} /></span>
+            <p>
+              <strong>{academic.role}</strong>
+              <span>{academic.institution}</span>
+              <em>{academic.department} · {academic.period}</em>
+            </p>
+          </div>
+          <ul className="about-specialist-badges" data-reveal="up" aria-label="Professional credentials">
+            {about.credentials.map((credential) => <li key={credential.abbreviation}>
+              {credential.abbreviation}
+              <span className="sr-only"> — {credential.title}</span>
+            </li>)}
+          </ul>
+          {/* The section's one call to action, carried over from the Home page. */}
+          <div data-reveal="up" className="!mt-[36px]">
+            <Home2Button href="/about">Read More</Home2Button>
           </div>
         </div>
       </div>
@@ -222,7 +242,7 @@ function HomeTwoChoose({ doctor, home }: { doctor: DoctorProfile; home: HomeCont
             <p>{home.choose.description}</p>
             <div className="home2-patient-row">
               <Home2Button href="/services">Read More</Home2Button>
-              {doctor.happyPatients ? <div className="home2-patient-box"><Image src={doctor.happyPatients.image} alt="Demo patient group" width={150} height={60} /><div><h3>{doctor.happyPatients.value}</h3><p>{doctor.happyPatients.label}</p></div></div> : null}
+              {doctor.happyPatients ? <div className="home2-patient-box"><Image src={doctor.happyPatients.image} alt="Patients at the practice" width={150} height={60} /><div><h3>{doctor.happyPatients.value}</h3><p>{doctor.happyPatients.label}</p></div></div> : null}
             </div>
             <div className="home2-choose-bottom">
               {home.choose.items.map((item) => <article className="home2-choose-box" key={item.number}><span>{item.number}</span><h3><Link href="/services">{item.title}</Link></h3><p>{item.description}</p></article>)}
@@ -249,64 +269,6 @@ function HomeTwoCases({ cases, eyebrow, title }: { cases: CaseStudy[]; eyebrow: 
     <div className="home2-container">
       <Home2SectionTitle eyebrow={eyebrow} title={title} center className="home2-cases-title" />
       <div className="home2-case-grid">{cases.slice(0, 3).map((item, index) => <CaseCard item={item} index={index} key={item.slug} />)}</div>
-    </div>
-  </section>;
-}
-
-function HomeTwoAppointment({ doctor, services, appointment }: { doctor: DoctorProfile; services: DentalService[]; appointment: HomeContent["appointment"] }) {
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSubmitting(true);
-    setErrorMessage("");
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    try {
-      await submitAppointmentRequest({
-        name: String(formData.get("name") || ""),
-        email: String(formData.get("email") || ""),
-        phone: String(formData.get("phone") || ""),
-        service: String(formData.get("service") || ""),
-        preferredDate: String(formData.get("date") || ""),
-        message: String(formData.get("message") || "Appointment requested from Home-2 form.")
-      });
-      setSuccessMessage(appointment.successMessage);
-      form.reset();
-    } catch (error) {
-      setErrorMessage(error instanceof Error ? error.message : "Please try again.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  return <section className="home2-appointment" data-reveal="up">
-    <div className="home2-container">
-      <div className="home2-appointment-card" style={{ backgroundImage: "url('/assets/img/appoint-overImg2-h1.png')" }}>
-        <div className="home2-appointment-left">
-          <Home2SectionTitle eyebrow={appointment.eyebrow} title={appointment.title} light className="home2-appointment-title" />
-          <div className="home2-appointment-contact" data-reveal="up" style={{ transitionDelay: "0.3s" }}>
-            <div><span><Icon name="headphones" size={30} /></span><p><small>Call Us 24/7</small><a href={telephoneHref(doctor.phone)}>{doctor.phone}</a></p></div>
-            <div><span><Icon name="mail" size={30} /></span><p><small>Need Assistance?</small><a href={`mailto:${doctor.email}`}>{doctor.email}</a></p></div>
-          </div>
-        </div>
-        <div className="home2-appointment-form-wrap" data-reveal="up" style={{ transitionDelay: "0.4s" }}>
-          {successMessage ? <p className="home2-appointment-success" role="status">{successMessage}</p> : <form onSubmit={onSubmit}>
-            <div className="home2-appointment-grid">
-              <input name="name" type="text" placeholder="Your Name" required />
-              <input name="email" type="email" placeholder="Email Address" required />
-              <input name="phone" type="text" placeholder="Phone Number" required />
-              <select name="service" aria-label="Select Department" defaultValue=""><option value="" disabled>Select Department</option>{services.map((service) => <option key={service.slug}>{service.title}</option>)}</select>
-              <select name="doctor" aria-label="Select Doctor" defaultValue={doctor.name}><option>{doctor.name}</option></select>
-              <input name="date" aria-label="Appointment date" type="date" />
-            </div>
-            <textarea name="message" placeholder="Type Your Message" />
-            <div className="home2-appointment-submit"><Home2Button type="submit">{submitting ? "Submitting..." : "Make An Appointment"}</Home2Button></div>
-            {errorMessage ? <p className="home2-appointment-success" role="alert">{errorMessage}</p> : null}
-          </form>}
-        </div>
-      </div>
     </div>
   </section>;
 }
@@ -339,7 +301,7 @@ function HomeTwoTestimonials({ testimonials, eyebrow, title }: { testimonials: T
           {testimonials.map((item, index) => {
             const rating = Math.max(0, Math.min(item.rating, 4));
             return <article className="home2-testimonial-card" data-reveal="up" style={{ transitionDelay: `${0.2 + (index % 3) * 0.1}s` }} key={`${item.role}-${index}`}>
-              <div className="home2-testimonial-head"><span><Image src={item.image} alt="Demo patient feedback" width={60} height={60} /></span><strong aria-hidden="true">”</strong></div>
+              <div className="home2-testimonial-head"><span><Image src={item.image} alt="" width={60} height={60} /></span><strong aria-hidden="true">”</strong></div>
               <div className="home2-stars">{"★".repeat(rating)}<span>{"☆".repeat(Math.max(0, 5 - rating))}</span></div>
               <p>“{item.quote}”</p>
               <h3>{item.name}</h3><p className="home2-testimonial-role">{item.role}</p>
@@ -379,15 +341,19 @@ function HomeTwoBlog({ posts, eyebrow, title }: { posts: BlogPost[]; eyebrow: st
   </section>;
 }
 
-export function HomeTwoDental({ doctor, home, services, cases, posts, testimonials }: { doctor: DoctorProfile; home: HomeContent; services: DentalService[]; cases: CaseStudy[]; posts: BlogPost[]; testimonials: Testimonial[] }) {
+export function HomeTwoDental({ doctor, home, services, cases, posts, testimonials, appointmentContent, chambers }: { doctor: DoctorProfile; home: HomeContent; services: DentalService[]; cases: CaseStudy[]; posts: BlogPost[]; testimonials: Testimonial[]; appointmentContent: AppointmentContent; chambers: Chamber[] }) {
+  // Slide content is assembled in the domain layer from the same typed records the rest of the
+  // page renders, so the hero adds no second data source and no new fetch.
+  const heroSlides = buildHomeHeroSlides({ doctor, home, services, chambers });
+
   return <div className="home2-page">
-    <HomeTwoHero doctor={doctor} />
+    <HomeTwoHero doctor={doctor} slides={heroSlides} />
     <HomeTwoAbout doctor={doctor} />
     <HomeTwoServices services={services} intro={home.servicesIntro} />
     <HomeTwoVideoCount doctor={doctor} home={home} />
     <HomeTwoChoose doctor={doctor} home={home} />
     <HomeTwoCases cases={cases} eyebrow={home.caseEyebrow} title={home.caseTitle} />
-    <HomeTwoAppointment doctor={doctor} services={services} appointment={home.appointment} />
+    <HomeTwoAppointmentSection doctor={doctor} appointment={home.appointment} appointmentContent={appointmentContent} chambers={chambers} />
     <HomeTwoTestimonials testimonials={testimonials} eyebrow={home.testimonialEyebrow} title={home.testimonialTitle} />
     <HomeTwoBlog posts={posts} eyebrow={home.blogEyebrow} title={home.blogTitle} />
   </div>;

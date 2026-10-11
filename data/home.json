@@ -35,12 +35,12 @@
   "appointment": {
     "eyebrow": "Appointment",
     "title": "Make An Appointment For Consulting",
-    "description": "Share your dental concern and preferred time. The demo form is frontend-first and ready for a future Laravel backend.",
+    "description": "Share your dental concern and preferred time, and the clinic team will confirm your appointment by phone or email.",
     "successMessage": "Thank you. Your appointment request has been received."
   },
   "blogTitle": "Our Most Latest Dental News & Articles",
   "caseTitle": "Showcasing Dental Planning Excellence",
-  "testimonialTitle": "Feedback & Review From Demo Patients",
+  "testimonialTitle": "Feedback & Review From Our Patients",
   "caseEyebrow": "Case Study",
   "testimonialEyebrow": "Testimonials",
   "blogEyebrow": "Blog & News"
