@@ -1,13 +1,18 @@
+import { cache } from "react";
 import { apiGet, unwrapApiData } from "@/lib/api/client";
 import type { DentalService } from "@/types/content";
 
-export async function getServices(): Promise<DentalService[]> {
+/** Memoised per request so the layout and a page route never re-fetch the same list. */
+async function loadServices(): Promise<DentalService[]> {
   return unwrapApiData(await apiGet<DentalService[]>("/services", { next: { revalidate: 3600 } }));
 }
 
-export async function getServiceBySlug(slug: string): Promise<DentalService> {
+async function loadServiceBySlug(slug: string): Promise<DentalService> {
   return unwrapApiData(await apiGet<DentalService>(`/services/${slug}`, { next: { revalidate: 3600 } }));
 }
+
+export const getServices = cache(loadServices);
+export const getServiceBySlug = cache(loadServiceBySlug);
 
 export function getFeaturedServices(services: DentalService[], limit = 5): DentalService[] {
   return services.slice(0, limit);

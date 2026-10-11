@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { PageHero } from "@/components/ui/PageHero";
 import { getBlogPostBySlug, getBlogPosts, getRelatedPosts } from "@/features/blog/blog.service";
+import { getBlogDetailHero } from "@/features/hero/pageHero.service";
 import { getServices } from "@/features/services/service.service";
 import { BlogDetailsSourceDental } from "@/features/source/BlogDetailsSourceDental";
 import { createPageMetadata } from "@/lib/seo/metadata";
@@ -28,11 +29,15 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   let post: BlogPost;
   try { post = await getBlogPostBySlug(slug); } catch { notFound(); }
 
-  const [posts, services] = await Promise.all([getBlogPosts(), getServices()]);
+  const [posts, services, hero] = await Promise.all([
+    getBlogPosts(),
+    getServices(),
+    getBlogDetailHero(post)
+  ]);
   const relatedPosts = getRelatedPosts(posts, post, 3);
 
   return <>
-    <Breadcrumb title="Blog" current={post.title} sourceTemplate />
+    <PageHero {...hero} />
     <BlogDetailsSourceDental post={post} services={services} relatedPosts={relatedPosts} />
   </>;
 }

@@ -1,6 +1,6 @@
 import type { ApiResponse } from "@/types/api";
 
-const requestId = () => `demo_${Date.now()}_${Math.random().toString(16).slice(2, 8)}`;
+const requestId = () => `req_${Date.now()}_${Math.random().toString(16).slice(2, 8)}`;
 
 export function ok<T>(data: T, count?: number): ApiResponse<T> {
   return {
@@ -10,7 +10,7 @@ export function ok<T>(data: T, count?: number): ApiResponse<T> {
     meta: {
       requestId: requestId(),
       generatedAt: new Date().toISOString(),
-      source: "demo-json",
+      source: "bundled-content",
       ...(typeof count === "number" ? { count } : {})
     }
   };
@@ -24,7 +24,7 @@ export function fail<T = never>(code: string, message: string, details?: Record<
     meta: {
       requestId: requestId(),
       generatedAt: new Date().toISOString(),
-      source: "demo-json"
+      source: "bundled-content"
     }
   };
 }

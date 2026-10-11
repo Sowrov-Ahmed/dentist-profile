@@ -1,16 +1,16 @@
-# Demo API Documentation
+# API Documentation
 
 Base URL is controlled by:
 
 ```env
-NEXT_PUBLIC_API_BASE_URL=/api/demo
+NEXT_PUBLIC_API_BASE_URL=/api
 ```
 
-The demo API reads maintainable root JSON files in `data/` (`site.json`, `navigation.json`, `doctor.json`, `services.json`, `case-studies.json`, `blog-posts.json`, `testimonials.json`, `faqs.json`, and `contact.json`).
+The API reads maintainable root JSON files in `data/` (`site.json`, `navigation.json`, `doctor.json`, `services.json`, `case-studies.json`, `blog-posts.json`, `testimonials.json`, `faqs.json`, and `contact.json`).
 
 ## Response envelope
 
-All demo API responses use this structure:
+All API responses use this structure:
 
 ```ts
 type ApiResponse<T> = {
@@ -24,7 +24,7 @@ type ApiResponse<T> = {
   meta: {
     requestId: string;
     generatedAt: string;
-    source: "demo-json" | "external-api";
+    source: "bundled-content" | "remote-api";
     count?: number;
   };
 };
@@ -32,19 +32,19 @@ type ApiResponse<T> = {
 
 ## Endpoints
 
-### `GET /api/demo/site`
+### `GET /api/site`
 
 Returns site brand, navigation, social links, logo path, disclaimer, and SEO defaults.
 
-### `GET /api/demo/navigation`
+### `GET /api/navigation`
 
 Returns the required navigation items: Home, About, Service, Case Study, Blog, Contact.
 
-### `GET /api/demo/doctor`
+### `GET /api/doctor`
 
 Returns the individual specialist profile, hero copy, contact details, office hours, profile image, about images, highlights, stats, and emergency note.
 
-### `GET /api/demo/home`
+### `GET /api/home`
 
 Returns home-page section content:
 
@@ -54,11 +54,11 @@ Returns home-page section content:
 - appointment copy
 - testimonials
 
-### `GET /api/demo/services`
+### `GET /api/services`
 
 Returns all dental services.
 
-### `GET /api/demo/services/[slug]`
+### `GET /api/services/[slug]`
 
 Returns one dental service by slug.
 
@@ -70,11 +70,11 @@ Current slugs:
 - `smile-design-consultation`
 - `gum-care-guidance`
 
-### `GET /api/demo/case-studies`
+### `GET /api/case-studies`
 
 Returns all case studies.
 
-### `GET /api/demo/case-studies/[slug]`
+### `GET /api/case-studies/[slug]`
 
 Returns one case study by slug.
 
@@ -84,11 +84,11 @@ Current slugs:
 - `tooth-preserving-endodontic-care`
 - `functional-restoration-plan`
 
-### `GET /api/demo/blog`
+### `GET /api/blog`
 
 Returns all blog posts.
 
-### `GET /api/demo/blog/[slug]`
+### `GET /api/blog/[slug]`
 
 Returns one blog post by slug.
 
@@ -98,7 +98,7 @@ Current slugs:
 - `root-canal-treatment-myths`
 - `bleeding-gums-should-not-be-ignored`
 
-### `POST /api/demo/contact`
+### `POST /api/contact`
 
 Receives appointment requests.
 
@@ -132,7 +132,7 @@ Success response data:
 }
 ```
 
-### `POST /api/demo/newsletter`
+### `POST /api/newsletter`
 
 Receives newsletter signups.
 

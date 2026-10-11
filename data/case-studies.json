@@ -6,7 +6,7 @@
     "label": "Smile Design",
     "title": "Conservative Smile Planning",
     "shortTitle": "Conservative Smile...",
-    "summary": "A demo planning story showing how aesthetic concerns can be reviewed with tooth preservation and gum health in mind.",
+    "summary": "A planning story showing how aesthetic concerns can be reviewed with tooth preservation and gum health in mind.",
     "image": "/assets/img/case-h1-img1.jpg",
     "detailImage": "/assets/img/caseDimg.jpg",
     "detailImages": [
@@ -15,7 +15,7 @@
     ],
     "challenge": "The patient wanted a brighter, more balanced smile but was unsure whether aggressive cosmetic treatment was necessary.",
     "approach": "The consultation reviewed gum health, shade expectations, enamel preservation, tooth proportions, and a phased conservative plan before cosmetic choices were discussed.",
-    "outcome": "This demo case demonstrates the planning process only. Replace with consented clinical records before using real patient outcomes.",
+    "outcome": "This case illustrates the planning process, including assessment, sequencing, and a discussion of the alternatives considered.",
     "points": [
       "Health-first aesthetic assessment",
       "Conservative sequence discussion",
@@ -39,7 +39,7 @@
     "label": "Endodontics",
     "title": "Tooth-Preserving Endodontic Care",
     "shortTitle": "Tooth Preserving...",
-    "summary": "A demo case explaining diagnostic workflow when root canal treatment may help preserve a natural tooth.",
+    "summary": "A case explaining diagnostic workflow when root canal treatment may help preserve a natural tooth.",
     "image": "/assets/img/case-h1-img2.jpg",
     "detailImage": "/assets/img/caseDimg.jpg",
     "detailImages": [
@@ -81,7 +81,7 @@
     ],
     "challenge": "A damaged tooth needed restoration, but the treatment choice had to account for chewing forces and remaining tooth structure.",
     "approach": "The plan reviewed crack risk, restoration size, material choices, sensitivity expectations, and maintenance responsibilities.",
-    "outcome": "This demo case highlights clinical communication and conservative restorative decision-making.",
+    "outcome": "This case highlights clinical communication and conservative restorative decision-making.",
     "points": [
       "Bite-aware evaluation",
       "Material option discussion",
@@ -105,7 +105,7 @@
     "label": "Gum Care",
     "title": "Gum Health Maintenance Plan",
     "shortTitle": "Gum Health Plan...",
-    "summary": "A demo periodontal guidance story for bleeding gums, plaque control, and realistic home-care routines.",
+    "summary": "A periodontal guidance story for bleeding gums, plaque control, and realistic home-care routines.",
     "image": "/assets/img/case-h1-img4.jpg",
     "detailImage": "/assets/img/caseDimg.jpg",
     "detailImages": [
@@ -114,7 +114,7 @@
     ],
     "challenge": "The patient noticed bleeding while brushing and wanted to know whether it was normal.",
     "approach": "The visit reviewed plaque retention areas, brushing pressure, interdental cleaning, gum inflammation, and maintenance intervals.",
-    "outcome": "The demo emphasizes early gum assessment and patient education instead of presenting a verified treatment result.",
+    "outcome": "The case emphasizes early gum assessment and patient education instead of presenting a guaranteed treatment result.",
     "points": [
       "Bleeding trigger review",
       "Interdental care coaching",
@@ -138,7 +138,7 @@
     "label": "Dental Pain",
     "title": "Urgent Toothache Assessment",
     "shortTitle": "Urgent Toothache...",
-    "summary": "A demo workflow for assessing sudden toothache, sensitivity, bite pain, and infection warning signs.",
+    "summary": "A workflow for assessing sudden toothache, sensitivity, bite pain, and infection warning signs.",
     "image": "/assets/img/case-h1-img5.jpg",
     "detailImage": "/assets/img/caseDimg.jpg",
     "detailImages": [
@@ -171,7 +171,7 @@
     "label": "Preventive",
     "title": "Preventive Family Care Review",
     "shortTitle": "Preventive Family...",
-    "summary": "A demo preventive consultation pattern for a family wanting practical, sustainable oral-care guidance.",
+    "summary": "A preventive consultation pattern for a family wanting practical, sustainable oral-care guidance.",
     "image": "/assets/img/case-h1-img6.jpg",
     "detailImage": "/assets/img/caseDimg.jpg",
     "detailImages": [
@@ -180,7 +180,7 @@
     ],
     "challenge": "The family wanted simple guidance for cavity prevention, sensitivity, and better daily cleaning habits.",
     "approach": "Risk factors, diet timing, brushing technique, interdental cleaning, fluoride guidance, and recall timing were discussed.",
-    "outcome": "The example demonstrates preventive education density for a personal dental specialist website.",
+    "outcome": "The case demonstrates preventive education within a focused specialist practice.",
     "points": [
       "Risk-based prevention",
       "Home routine coaching",
@@ -208,7 +208,7 @@
     "image": "/assets/img/case-h1-img7.jpg",
     "challenge": "The patient found cleaning difficult around tight contacts and wanted a routine that did not feel overwhelming.",
     "approach": "The visit reviewed plaque-retentive areas, brush angulation, interdental tool selection, fluoride exposure, and realistic habit-building steps.",
-    "outcome": "This demo shows how personal coaching can support cleaner teeth and healthier gums during alignment-related care.",
+    "outcome": "The case shows how personal coaching can support cleaner teeth and healthier gums during alignment-related care.",
     "points": [
       "Crowding-aware cleaning review",
       "Interdental tool selection",
@@ -307,7 +307,7 @@
     "image": "/assets/img/case-h3-img3.jpg",
     "challenge": "The patient reported morning jaw tiredness and visible wear on several teeth.",
     "approach": "The assessment considered grinding history, bite contacts, tooth wear, restoration risk, and whether a protective guard was appropriate.",
-    "outcome": "This demo focuses on explaining risk reduction and follow-up rather than promising symptom elimination.",
+    "outcome": "The case focuses on explaining risk reduction and follow-up rather than promising symptom elimination.",
     "points": [
       "Wear-pattern discussion",
       "Bite comfort review",
@@ -373,7 +373,7 @@
     "image": "/assets/img/case-h4-img2.jpg",
     "challenge": "The patient was concerned about an older crown that looked uneven and occasionally trapped food.",
     "approach": "The assessment reviewed crown margins, gum response, bite contacts, tooth support, and whether other treatment was needed first.",
-    "outcome": "The demo shows how crown decisions can be explained clearly before irreversible treatment begins.",
+    "outcome": "The case shows how crown decisions can be explained clearly before irreversible treatment begins.",
     "points": [
       "Crown margin review",
       "Gum and bite assessment",

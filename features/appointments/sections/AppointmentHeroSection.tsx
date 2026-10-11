@@ -1,16 +1,18 @@
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import type { AppointmentContent, Chamber } from "@/types/content";
+import { PageHero } from "@/components/ui/PageHero";
+import type { Chamber, PageHeroContent } from "@/types/content";
 
-export function AppointmentHeroSection({ content, selectedChamber }: { content: AppointmentContent; selectedChamber: Chamber | null }) {
-  return <>
-    <Breadcrumb title="Appointment" current="Appointment" sourceTemplate />
-    <section className="source-appointment-hero" aria-labelledby="appointment-page-title">
-      <div className="source-page-container">
-        <p className="source-chambers-eyebrow">{content.eyebrow}</p>
-        <h1 id="appointment-page-title">{content.title}</h1>
-        <p>{content.description}</p>
-        {selectedChamber ? <div className="source-appointment-selected-note" role="status">Selected chamber: <strong>{selectedChamber.name}</strong></div> : null}
-      </div>
-    </section>
-  </>;
+export function AppointmentHeroSection({ hero, selectedChamber }: { hero: PageHeroContent; selectedChamber: Chamber | null }) {
+  return (
+    <PageHero
+      {...hero}
+      headingId="appointment-page-title"
+      meta={
+        selectedChamber ? (
+          <p role="status" className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2.5 text-sm text-white">
+            Selected chamber: <strong className="ml-1 font-bold">{selectedChamber.name}</strong>
+          </p>
+        ) : null
+      }
+    />
+  );
 }

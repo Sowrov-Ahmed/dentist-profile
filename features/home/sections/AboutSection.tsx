@@ -4,7 +4,7 @@ import { PrimaryButton } from "@/components/ui/Button";
 
 export function AboutSection({ doctor }: { doctor: DoctorProfile }) {
   return (
-    <section className="about-source" id="about-preview">
+    <section className="about-source" id="about-overview">
       <div className="about-source-container">
         <div className="about-source-grid">
           <div className="about-source-left">

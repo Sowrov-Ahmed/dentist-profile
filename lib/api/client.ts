@@ -1,7 +1,7 @@
 import type { ApiResponse } from "@/types/api";
 import { ApiClientError } from "@/types/api";
-import { buildApiUrl, getApiBaseUrl, isDemoApiBase } from "./config";
-import { resolveDemoEndpoint } from "./demo-repository";
+import { buildApiUrl, getApiBaseUrl, isLocalApiBase } from "./config";
+import { resolveContentEndpoint } from "./content-source";
 
 type FetchOptions = RequestInit & {
   next?: {
@@ -10,23 +10,72 @@ type FetchOptions = RequestInit & {
   };
 };
 
+/**
+ * Guards every upstream request with a hard ceiling. Without it a request that never
+ * settles (socket held open by a proxy, a Laravel route that hangs, a dropped upstream)
+ * keeps its Suspense boundary pending forever, so the visitor is pinned on the loading
+ * state indefinitely. Converting the hang into a rejected request lets each page render
+ * its own error state instead. This is a failure-detection limit, not an artificial delay.
+ */
+export const API_REQUEST_TIMEOUT_MS = 10_000;
+
+function createTimeoutSignal(timeoutMs: number, externalSignal?: AbortSignal | null) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(new Error("API_REQUEST_TIMEOUT")), timeoutMs);
+
+  const onExternalAbort = () => controller.abort(externalSignal?.reason);
+  if (externalSignal) {
+    if (externalSignal.aborted) onExternalAbort();
+    else externalSignal.addEventListener("abort", onExternalAbort, { once: true });
+  }
+
+  return {
+    signal: controller.signal,
+    release() {
+      clearTimeout(timer);
+      externalSignal?.removeEventListener("abort", onExternalAbort);
+    }
+  };
+}
+
+async function requestWithTimeout(input: RequestInfo | URL, init: RequestInit, externalSignal?: AbortSignal | null) {
+  const timeout = createTimeoutSignal(API_REQUEST_TIMEOUT_MS, externalSignal);
+
+  try {
+    return await fetch(input, { ...init, signal: timeout.signal });
+  } catch (error) {
+    if (timeout.signal.aborted && !externalSignal?.aborted) {
+      throw new ApiClientError("The API did not respond in time.", { code: "API_TIMEOUT" });
+    }
+
+    throw error;
+  } finally {
+    timeout.release();
+  }
+}
+
 export async function apiGet<T>(endpoint: string, options: FetchOptions = {}): Promise<ApiResponse<T>> {
   const base = getApiBaseUrl();
 
-  // Server Components use the same service API without needing an active HTTP server at build time.
-  // Browser/client requests still go through /api/demo exactly as they will go through a future Laravel API.
-  if (typeof window === "undefined" && isDemoApiBase(base)) {
-    return resolveDemoEndpoint<T>(endpoint);
+  // Server Components use the same service API without needing an active HTTP server at build time:
+  // when the bundled API is in use they read it directly. Browser/client requests still go over HTTP
+  // to the configured base, which is where an external Laravel API would sit.
+  if (typeof window === "undefined" && isLocalApiBase(base)) {
+    return resolveContentEndpoint<T>(endpoint);
   }
 
-  const response = await fetch(buildApiUrl(endpoint, base), {
-    ...options,
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      ...(options.headers || {})
-    }
-  });
+  const response = await requestWithTimeout(
+    buildApiUrl(endpoint, base),
+    {
+      ...options,
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        ...(options.headers || {})
+      }
+    },
+    options.signal
+  );
 
   return parseApiResponse<T>(response);
 }
@@ -36,16 +85,20 @@ export async function apiPost<TResponse, TBody extends Record<string, unknown>>(
   body: TBody,
   options: FetchOptions = {}
 ): Promise<ApiResponse<TResponse>> {
-  const response = await fetch(buildApiUrl(endpoint), {
-    ...options,
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      ...(options.headers || {})
+  const response = await requestWithTimeout(
+    buildApiUrl(endpoint),
+    {
+      ...options,
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        ...(options.headers || {})
+      },
+      body: JSON.stringify(body)
     },
-    body: JSON.stringify(body)
-  });
+    options.signal
+  );
 
   return parseApiResponse<TResponse>(response);
 }

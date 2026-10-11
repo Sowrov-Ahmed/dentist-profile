@@ -41,7 +41,7 @@
     ],
     "quote": {
       "text": "Small symptoms often become easier to manage when patients ask early instead of waiting until pain becomes constant.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Patient Education"
     },
     "homeTitle": "Why Preventive Dental Care Matters Most",
@@ -49,14 +49,14 @@
     "commentsList": [
       {
         "id": "blog-sensitive-teeth-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-01-16",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "Cold drinks have been bothering my front teeth for a few weeks. Would a sensitivity paste be enough, or is this worth checking in person?",
         "replies": [
           {
             "id": "blog-sensitive-teeth-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-01-16",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -107,7 +107,7 @@
     ],
     "quote": {
       "text": "The best treatment decision is the one a patient understands, including benefits, limitations, and long-term care responsibilities.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Endodontic Education"
     },
     "homeTitle": "Root Canal Myths Patients Still Hear",
@@ -115,14 +115,14 @@
     "commentsList": [
       {
         "id": "blog-root-canal-myths-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-02-08",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "I have been putting off a root canal because I assumed it meant losing the tooth. Is that still the usual outcome?",
         "replies": [
           {
             "id": "blog-root-canal-myths-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-02-08",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -173,7 +173,7 @@
     ],
     "quote": {
       "text": "Gum health is a foundation for long-term tooth stability, comfort, and confidence.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Gum Care"
     },
     "homeTitle": "Bleeding Gums Should Not Be Ignored",
@@ -181,14 +181,14 @@
     "commentsList": [
       {
         "id": "blog-bleeding-gums-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-02-25",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "My gums bleed most mornings when I brush. I assumed it was just too much pressure - is that worth booking an appointment for?",
         "replies": [
           {
             "id": "blog-bleeding-gums-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-02-25",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -239,7 +239,7 @@
     ],
     "quote": {
       "text": "A confident smile plan should protect health and respect natural tooth structure.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Smile Planning"
     },
     "homeTitle": "Smile Design Starts With Oral Health",
@@ -247,14 +247,14 @@
     "commentsList": [
       {
         "id": "blog-before-smile-design-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-03-12",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "Before booking a smile consultation, what should a patient already know or have checked beforehand?",
         "replies": [
           {
             "id": "blog-before-smile-design-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-03-12",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -305,20 +305,20 @@
     ],
     "quote": {
       "text": "Restorative dentistry works best when the plan protects both the tooth and the patient’s daily function.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Restorative Care"
     },
     "commentsList": [
       {
         "id": "blog-restoration-options-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-03-28",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "When a tooth needs repair, how do you decide between a filling, a crown, or replacing it altogether?",
         "replies": [
           {
             "id": "blog-restoration-options-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-03-28",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -369,20 +369,20 @@
     ],
     "quote": {
       "text": "Pain is the body asking for assessment; severe warning signs need urgent care, not waiting.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Dental Pain Review"
     },
     "commentsList": [
       {
         "id": "blog-dental-pain-warning-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-04-09",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "How long should someone wait with a toothache before treating it as urgent rather than booking a normal appointment?",
         "replies": [
           {
             "id": "blog-dental-pain-warning-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-04-09",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -433,20 +433,20 @@
     ],
     "quote": {
       "text": "Prevention succeeds when it fits into real daily life.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Prevention"
     },
     "commentsList": [
       {
         "id": "blog-daily-oral-care-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-04-21",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "What is the most realistic daily routine someone can keep up with if twice-daily brushing and flossing has not worked before?",
         "replies": [
           {
             "id": "blog-daily-oral-care-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-04-21",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."
@@ -497,20 +497,20 @@
     ],
     "quote": {
       "text": "A good consultation makes the patient feel informed, not pressured.",
-      "name": "Demo Clinical Note",
+      "name": "Clinic Editorial Team",
       "role": "Consultation"
     },
     "commentsList": [
       {
         "id": "blog-first-consultation-comment-1",
-        "name": "Demo Reader",
+        "name": "Patient Enquiry",
         "date": "2026-05-02",
         "image": "/assets/img/blogDimg2.jpg",
-        "body": "This demo comment area shows how patient education discussion can appear once connected to a moderated backend.",
+        "body": "For a first consultation, what should I bring or prepare so the visit is useful?",
         "replies": [
           {
             "id": "blog-first-consultation-reply-1",
-            "name": "Demo Care Team",
+            "name": "Clinic Team",
             "date": "2026-05-02",
             "image": "/assets/img/blogDimg3.jpg",
             "body": "Thank you for reading. Please book a consultation for personal diagnosis and advice."

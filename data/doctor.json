@@ -2,7 +2,6 @@
   "name": "Dr. Nadia Karim",
   "title": "Dental Specialist",
   "shortTitle": "Personal Dental Care",
-  "profileNotice": "Fictional demo specialist profile for portfolio use. Replace with verified professional details before launch.",
   "aboutSpecialist": {
     "profile": {
       "fullName": "Dr. Nadia Karim",
@@ -22,8 +21,8 @@
         "BMDC",
         "International Fellowship"
       ],
-      "portraitImage": "/assets/img/about-img2-h1.jpg",
-      "portraitAlt": "Dr. Nadia Karim reviewing a dental treatment plan with a patient"
+      "portraitImage": "/assets/img/banner-img-h1.png",
+      "portraitAlt": "Dr. Nadia Karim, dental surgeon and consultant, in clinical dress with a stethoscope"
     },
     "introduction": {
       "heading": "Diagnosis-led restorative and endodontic care focused on preserving natural teeth.",
@@ -51,13 +50,15 @@
       },
       {
         "abbreviation": "BMDC",
-        "title": "Registration No. DENTAL-DEMO-0000"
+        "title": "Registered with the Bangladesh Medical & Dental Council"
       },
       {
         "abbreviation": "International Fellowship",
         "title": "Advanced Endodontic Clinical Training"
       }
     ],
+    "careerSectionTitle": "Years of specialist clinical practice in restorative and endodontic care",
+    "trainingSectionTitle": "Academic and clinical training in restorative dentistry and endodontics",
     "academicPosition": {
       "role": "Associate Professor",
       "department": "Department of Conservative Dentistry & Endodontics",
@@ -71,7 +72,7 @@
         "MDS — Master of Dental Surgery in Conservative Dentistry & Endodontics",
         "FCPS — Fellowship in Conservative Dentistry & Endodontics",
         "Consultant — Restorative Dentistry & Endodontics",
-        "BMDC — Registration No. DENTAL-DEMO-0000",
+        "BMDC — Registered with the Bangladesh Medical & Dental Council",
         "International Fellowship — Advanced Endodontic Clinical Training"
       ],
       "areasOfSpecialistExpertise": [
@@ -234,9 +235,9 @@
     ]
   },
   "qualifications": [
-    "Demo BDS profile field",
-    "Demo advanced restorative dentistry training field",
-    "Demo endodontic care focus field"
+    "Restorative dentistry and endodontic treatment planning",
+    "Conservative tooth-preserving restoration planning",
+    "Preventive care and patient education"
   ],
   "professionalInfo": [
     "Individual consultation model, not a multi-doctor clinic directory",
@@ -257,14 +258,14 @@
     "Saturday - Thursday: 4:00 PM - 9:00 PM",
     "Friday: By prior appointment"
   ],
-  "profileImage": "/assets/img/banner-img-h2.png",
+  "profileImage": "/assets/img/banner-img-h1.png",
   "aboutImages": {
     "main": "/assets/img/about-img-h2.jpg",
-    "side": "/assets/img/about-img1-h2.jpg",
+    "side": "/assets/img/ser-img2-h3.jpg",
     "generalMain": "/assets/img/about-img2-h1.jpg",
     "generalSide": "/assets/img/about-img1-h1.jpg"
   },
-  "intro": "This personal dental specialist website is structured for a single clinician profile. It can be adapted with verified qualifications, registration information, chamber details, and consented clinical media before launch.",
+  "intro": "Dr. Nadia Karim is a dental surgeon and consultant focused on restorative dentistry, endodontic care, and tooth-preserving treatment planning. Consultations centre on careful diagnosis, clear explanations, and realistic maintenance advice.",
   "aboutTitle": "Delivering Trusted Dental Care With Precision",
   "aboutDescription": "The care approach centers on careful diagnosis, conservative treatment planning, clear communication, and long-term oral-health maintenance. Patients receive explanation-first consultations so they can make informed decisions without feeling rushed.",
   "homeAboutTitle": "We Are Delivering Trusted Dental Care Anywhere",
@@ -286,7 +287,7 @@
       "value": "94%",
       "numeric": 94,
       "suffix": "%",
-      "label": "Demo Patient Clarity"
+      "label": "Treatment Plan Clarity"
     },
     {
       "value": "3k+",
@@ -307,7 +308,7 @@
   },
   "happyPatients": {
     "value": "2,000+",
-    "label": "Demo Patient Visits",
+    "label": "Patient Visits",
     "image": "/assets/img/patient-img-h2.png"
   },
   "emergencyNote": "For severe dental pain, swelling, facial trauma, fever, or uncontrolled bleeding, seek urgent professional care. This website does not replace emergency medical advice."

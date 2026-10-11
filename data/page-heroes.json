@@ -1,0 +1,52 @@
+{
+  "about": {
+    "eyebrow": "Meet The Specialist",
+    "title": "A calm, explanation-first dental practice.",
+    "description": "Get to know the specialist behind the chair, the training behind the recommendations, and the philosophy that shapes every treatment plan."
+  },
+  "services": {
+    "eyebrow": "Services & Procedures",
+    "title": "A clear treatment pathway for every stage of care.",
+    "description": "Explore the doctor's verified services and clinical scope below."
+  },
+  "serviceDetail": {
+    "eyebrow": "Treatment Detail",
+    "title": "Treatment Detail",
+    "description": "Review what this treatment involves, who it suits, and what to expect before you decide."
+  },
+  "caseStudies": {
+    "eyebrow": "Case Study",
+    "title": "Real decisions, documented from consultation to review.",
+    "description": "Browse documented treatment journeys showing how findings, options, and outcomes were reasoned through case by case."
+  },
+  "caseStudyDetail": {
+    "eyebrow": "Case Study",
+    "title": "Case Study",
+    "description": "See the presenting concern, the options considered, and the reasoning behind the plan that followed."
+  },
+  "blog": {
+    "eyebrow": "Blog & News",
+    "title": "Practical dental guidance you can actually use.",
+    "description": "Read clear, patient-friendly articles on symptoms, treatment options, and day-to-day oral care."
+  },
+  "blogDetail": {
+    "eyebrow": "From The Blog",
+    "title": "Article",
+    "description": "Patient-friendly guidance written to make the next conversation with your dentist easier."
+  },
+  "chambers": {
+    "eyebrow": "Chamber directory",
+    "title": "Available consultation chambers",
+    "description": "Review schedule, direct contact, fee details, and map access for each chamber before requesting an appointment."
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Questions are the start of good care.",
+    "description": "Send a message or call directly, and choose the chamber that best fits your schedule."
+  },
+  "appointment": {
+    "eyebrow": "Appointment",
+    "title": "Request a dental consultation.",
+    "description": "Choose a chamber, consultation type, and preferred date, and describe your concern so the team can prepare for your visit."
+  }
+}

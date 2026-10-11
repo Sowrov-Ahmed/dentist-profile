@@ -13,9 +13,9 @@ Feature and Domain Services
   ↓
 Central API Client
   ↓
-Demo API Routes
+API Routes
   ↓
-JSON Demo Data
+JSON Content Data
 ```
 
 ## UI layer
@@ -23,7 +23,7 @@ JSON Demo Data
 - `app/*` contains route entry points, page metadata, dynamic route generation, `robots.ts`, and `sitemap.ts`.
 - `components/layout` contains `Header` and `Footer`.
 - `components/ui` contains reusable UI primitives such as buttons, breadcrumb, icons, motion provider, and back-to-top.
-- `components/forms` contains client-side forms that submit to demo API routes.
+- `components/forms` contains client-side forms that submit to the API routes.
 - `components/cards` contains reusable Service, Case, and Blog cards.
 - `features/home/sections` contains source-inspired Home-2 sections.
 
@@ -51,13 +51,13 @@ These services are intentionally close to a future Laravel resource structure.
 - `NEXT_PUBLIC_API_BASE_URL`
 - `NEXT_PUBLIC_SITE_URL`
 - URL building
-- demo API detection
+- local API detection
 
-When `NEXT_PUBLIC_API_BASE_URL=/api/demo` and code runs on the server, the client resolves data through `lib/api/demo-repository.ts` so static builds do not require a running web server. In the browser, forms and client interactions call `/api/demo/...` normally.
+When `NEXT_PUBLIC_API_BASE_URL=/api` and code runs on the server, the client resolves data through `lib/api/content-source.ts` so static builds do not require a running web server. In the browser, forms and client interactions call `/api/...` normally.
 
-## Demo API layer
+## API layer
 
-Routes under `app/api/demo` return predictable typed envelopes:
+Routes under `app/api` return predictable typed envelopes:
 
 ```ts
 {
@@ -67,7 +67,7 @@ Routes under `app/api/demo` return predictable typed envelopes:
   meta: {
     requestId: string;
     generatedAt: string;
-    source: "demo-json" | "external-api";
+    source: "bundled-content" | "remote-api";
     count?: number;
   };
 }
