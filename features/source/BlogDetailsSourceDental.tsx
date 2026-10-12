@@ -27,7 +27,7 @@ export function BlogDetailsSourceDental({ post, services, relatedPosts }: { post
             <article className="source-blog-detail-card" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
               <div className="source-blog-detail-image"><Image src={post.detailImage} alt={post.title} width={870} height={520} priority /></div>
               <div className="source-blog-detail-content">
-                <div className="source-blog-detail-meta" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
+                <div className="source-blog-detail-meta mx-0 mt-[10px] mb-5 flex flex-wrap items-center gap-0" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
                   <Link href={articlePath}><Icon name="user" size={15} /> {post.author}</Link><Link href={articlePath}><Icon name="comments" size={15} /> ({String(post.comments).padStart(2, "0")}) comments</Link><Link href={articlePath}><EyeIcon /> ({post.views}) views</Link>
                 </div>
                 <div className="source-blog-detail-text" data-reveal="up" style={{ transitionDelay: "0.2s" }}>

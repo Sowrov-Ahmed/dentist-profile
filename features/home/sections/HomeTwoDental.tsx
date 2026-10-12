@@ -111,12 +111,12 @@ function HomeTwoAbout({ doctor }: { doctor: DoctorProfile }) {
 
   return <section className="home2-about !relative !overflow-hidden" aria-label="About Specialist" data-reveal="up">
     <div className="home2-container">
-      <div className="home2-about-grid">
+      <div className="grid grid-cols-2 items-center gap-[30px] max-[1199px]:grid-cols-1">
         {/* Single-image treatment: the portrait sits on its soft-green plate, centred in its
             half of the two-column grid and sized to fill that column. The former collage
             (experience badge + secondary photo) has been removed, so the column is no longer
             a 420px frame plus a 195px stack. */}
-        <div className="home2-about-images" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
+        <div className="flex justify-center overflow-hidden max-[1199px]:mb-[30px] max-[767px]:block" data-reveal="up" style={{ transitionDelay: "0.2s" }}>
           <div className="home2-about-main-image !flex !items-end !justify-center !bg-[var(--home2-soft)] !shadow-[0_26px_60px_-34px_rgba(14,29,76,.32)]">
             <Image src={profile.portraitImage} alt={profile.portraitAlt} width={470} height={605} sizes="(max-width: 575px) 92vw, (max-width: 1199px) 470px, 470px" />
           </div>
@@ -268,7 +268,7 @@ function HomeTwoCases({ cases, eyebrow, title }: { cases: CaseStudy[]; eyebrow: 
   return <section className="home2-cases" data-reveal="up">
     <div className="home2-container">
       <Home2SectionTitle eyebrow={eyebrow} title={title} center className="home2-cases-title" />
-      <div className="home2-case-grid">{cases.slice(0, 3).map((item, index) => <CaseCard item={item} index={index} key={item.slug} />)}</div>
+      <div className="grid grid-cols-3 gap-[30px] max-[991px]:grid-cols-1">{cases.slice(0, 3).map((item, index) => <CaseCard item={item} index={index} key={item.slug} />)}</div>
     </div>
   </section>;
 }

@@ -108,7 +108,7 @@ export function AppointmentRequestForm({ content, chambers, selectedChamber }: {
     }
   }
 
-  return <div className="source-appointment-shell source-appointment-shell-compact" data-reveal="up">
+  return <div className="source-appointment-shell source-appointment-shell-compact gap-[28px] max-[1199px]:gap-[24px]" data-reveal="up">
     <form className="source-appointment-request-form source-appointment-request-form-compact !shadow-[0_18px_44px_rgba(14,29,76,.08)]" onSubmit={submit} noValidate>
       <div className="source-appointment-card-header !mb-7 !border-b !border-[#e4e8ed] !pb-6">
         <p className="source-chambers-eyebrow">Appointment request</p>

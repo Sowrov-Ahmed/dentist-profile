@@ -43,7 +43,7 @@ export function CaseStudyDetailsSourceDental({ item, relatedServices, relatedCas
                 <h3>Outcome</h3><p>{item.outcome}</p>
                 <h3>Results Patients Discuss</h3>
                 <ul className="service-detail-list mb-0">{item.points.map((point) => <li key={point}>{point}</li>)}</ul>
-                <div className="source-case-detail-actions"><Link className="source-service-read source-case-back-link" href="/case-studies">Back To List</Link></div>
+                <div className="source-case-detail-actions mt-[35px] flex flex-wrap gap-[15px]"><Link className="source-service-read source-case-back-link" href="/case-studies">Back To List</Link></div>
               </div>
             </article>
           </div>
@@ -52,7 +52,7 @@ export function CaseStudyDetailsSourceDental({ item, relatedServices, relatedCas
         <aside className="source-service-detail-sidebar source-case-detail-sidebar">
           <div className="source-detail-widget source-case-info-widget" data-reveal="up" style={{ transitionDelay: "0.4s" }}>
             <h3>Project Information</h3>
-            <ul className="source-case-info-list">
+            <ul className="source-case-info-list m-0 grid list-none gap-[14px] p-[30px]">
               <li><span>Category</span><strong>{item.label}</strong></li>
               <li><span>Case No.</span><strong>{item.number}</strong></li>
               <li><span>Primary Service</span><strong>{primaryService}</strong></li>

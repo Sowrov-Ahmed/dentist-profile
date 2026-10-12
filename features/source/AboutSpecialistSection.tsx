@@ -48,8 +48,8 @@ export function AboutSpecialistSection({ doctor }: { doctor: DoctorProfile }) {
   return <>
     <section className="about-specialist-section" aria-labelledby="about-specialist-title" data-mobile-motion>
       <div className="about-source-container">
-        <div className="about-specialist-profile">
-          <div className="about-specialist-media" data-reveal="up">
+        <div className="grid grid-cols-[minmax(0,5fr)_minmax(0,7fr)] items-center gap-[60px] max-[1300px]:gap-[46px] max-[1199px]:gap-[38px] max-[991px]:mx-auto max-[991px]:max-w-[620px] max-[991px]:grid-cols-1 max-[991px]:gap-[34px]">
+          <div className="about-specialist-media relative min-w-0" data-reveal="up">
             <figure className="about-specialist-photo">
               <Image src={profile.portraitImage} alt={profile.portraitAlt} fill sizes="(max-width: 991px) 620px, (max-width: 1199px) 470px, 537px" priority />
             </figure>

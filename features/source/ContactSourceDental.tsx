@@ -52,7 +52,7 @@ function ContactInfoCard({ kind, title, children }: { kind: "location" | "phone"
       ? <MailGraphic size={38} strokeWidth={2.2} />
       : <Icon name={kind} size={38} strokeWidth={2.2} />;
   const bgIcon = kind === "location" ? null : kind === "mail" ? <MailGraphic size={115} strokeWidth={1.8} /> : <Icon name={kind} size={115} strokeWidth={1.8} />;
-  return <div className="source-contact-info" data-reveal="up" style={{ transitionDelay: "0.45s" }}><div className="source-contact-info-head"><h2>{title}</h2><div className="source-contact-icon">{headIcon}</div></div>{children}{kind === "location" ? <Image src="/assets/img/map-green.png" alt="Map icon" width={120} height={100} /> : <span className="source-contact-bg-icon">{bgIcon}</span>}</div>;
+  return <div className="source-contact-info" data-reveal="up" style={{ transitionDelay: "0.45s" }}><div className="flex items-center justify-between gap-5"><h2>{title}</h2><div className="source-contact-icon">{headIcon}</div></div>{children}{kind === "location" ? <Image src="/assets/img/map-green.png" alt="Map icon" width={120} height={100} /> : <span className="absolute -bottom-5 left-1/2 leading-none text-teal opacity-10">{bgIcon}</span>}</div>;
 }
 
 export function ContactSourceDental({ doctor, contact, primaryChamber }: { doctor: DoctorProfile; services: DentalService[]; contact: ContactContent; primaryChamber: Chamber | null }) {
@@ -110,6 +110,6 @@ export function ContactSourceDental({ doctor, contact, primaryChamber }: { docto
         </div>
       </div>
     </section>
-    <div className="source-contact-map" data-reveal="up" style={{ transitionDelay: "0.25s" }}><div className="source-contact-mapouter"><iframe className="source-contact-gmap" src={contact.mapEmbedUrl} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={contact.mapTitle} /></div></div>
+    <div className="source-contact-map" data-reveal="up" style={{ transitionDelay: "0.25s" }}><div className="source-contact-mapouter"><iframe className="block h-[740px] w-full border-0 -mb-[10px] max-[991px]:h-[400px]" src={contact.mapEmbedUrl} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={contact.mapTitle} /></div></div>
   </>;
 }
