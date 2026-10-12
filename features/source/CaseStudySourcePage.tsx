@@ -29,12 +29,12 @@ export function CaseStudySourcePage({ cases, pagination }: { cases: CaseStudy[];
   const nextPage = pagination.nextPage ?? pagination.currentPage;
   const revealKey = `${pagination.currentPage}:${pagination.totalItems}:${cases.map((item) => item.slug).join("|")}`;
 
-  return <section className="source-case-page" data-reveal="up" data-case-grid-scope>
+  return <section className="source-case-page relative z-[1] bg-white py-[110px] max-[767px]:py-20" data-reveal="up" data-case-grid-scope>
     <CaseStudyGridRevealGuard watchKey={revealKey} />
     <h2 className="sr-only">Dental Case Studies</h2>
     <div className="source-page-container">
       {cases.length === 0 ? <EmptyState title="No case studies available" message="Case-study records are not available from the API yet." /> : <>
-        <div className="source-case-grid">
+        <div className="grid grid-cols-2 gap-[30px] max-[767px]:grid-cols-1">
           {cases.map((item, index) => <article className="source-case-card" data-reveal="up" style={{ transitionDelay: `${0.2 + (index % 3) * 0.1}s` }} key={item.slug}>
             <div className="source-case-image">
               <Link href={caseHref(item.slug)} aria-label={`Open ${item.title} case details`}>

@@ -38,7 +38,7 @@ export function BlogSourcePage({ posts, services, latest, pagination, filters }:
       <div className="source-blog-layout">
         <div className="source-blog-main">
           {posts.length === 0 ? <EmptyState title="No blog posts available" message={emptyMessage} /> : <>
-            <div className="source-blog-grid-page">
+            <div className="grid grid-cols-2 items-stretch gap-[30px] max-[767px]:grid-cols-1">
               {posts.map((post, index) => <article className="source-blog-card source-blog-grid-card" data-reveal="up" style={{ transitionDelay: `${0.2 + (index % 3) * 0.1}s` }} key={post.slug}>
                 <div className="source-blog-image"><Link href={`/blog/${post.slug}`} aria-label={post.title}><Image src={post.image} alt={post.title} width={420} height={260} loading={index < 2 ? "eager" : "lazy"} /></Link><p className="source-blog-date">{formatReadableDate(post.date)}</p></div>
                 <div className="source-blog-content">

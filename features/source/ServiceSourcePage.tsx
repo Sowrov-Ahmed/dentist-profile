@@ -25,9 +25,9 @@ function formatSourceDate(date: string) {
 }
 
 export function SourceServiceGrid({ services }: { services: DentalService[] }) {
-  return <section className="source-service-page" data-reveal="up">
+  return <section className="bg-white pt-[110px] pb-20 max-[767px]:py-20" data-reveal="up">
     <div className="source-page-container">
-      {services.length === 0 ? <EmptyState title="No services available" message="Service content is not available from the API yet." /> : <div className="source-service-grid">
+      {services.length === 0 ? <EmptyState title="No services available" message="Service content is not available from the API yet." /> : <div className="grid grid-cols-3 items-stretch gap-[30px] max-[991px]:grid-cols-2 max-[575px]:grid-cols-1">
         {services.map((service, index) => <article className="source-service-card" key={service.slug} data-reveal="up" style={{ transitionDelay: `${0.2 + Math.min(index, 3) * 0.1}s` }}>
           <div className="source-service-icon-row"><span className="source-service-icon"><Image src={service.icon} alt="" width={70} height={70} /></span><span className="source-service-number">{service.number}</span></div>
           <div className="source-service-text"><Link href={serviceHref(service.slug)}><h2>{service.title}</h2></Link><p>{service.summary}</p><Link href={serviceHref(service.slug)} className="source-service-read">Read More</Link></div>

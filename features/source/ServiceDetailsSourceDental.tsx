@@ -51,9 +51,9 @@ export function ServiceDetailsSourceDental({ service, relatedServices }: { servi
                 <h3>Benefits Patients Discuss</h3>
                 <ul className="service-detail-list mb-0">{service.benefits.map((item) => <li key={item}>{item}</li>)}</ul>
 
-                {service.faqs?.length ? <div className="service-detail-faqs">
+                {service.faqs?.length ? <div className="service-detail-faqs mt-[35px]">
                   <h3>Common Patient Questions</h3>
-                  {service.faqs.map((item) => <div className="service-detail-faq" key={item.question}>
+                  {service.faqs.map((item) => <div className="service-detail-faq mt-[18px] border-t border-[rgba(14,29,76,.12)] pt-[18px]" key={item.question}>
                     <h4>{item.question}</h4>
                     <p>{item.answer}</p>
                   </div>)}
